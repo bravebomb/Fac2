@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/drawable/top_circle.xml" value="0.129" />
+        <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/action_bar_layout.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/fragment_coop.xml" value="0.2872340425531915" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/drawable/ica_bg.xml" value="0.2445" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/drawable/search_view_bg.xml" value="0.2445" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/drawable/top_circle.xml" value="0.23" />
