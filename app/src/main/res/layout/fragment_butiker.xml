@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".AllFragments.ButikerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="533dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="51dp"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="51dp">
+
+        <Button
+            android:id="@+id/ica_button"
+            android:layout_width="200dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="5"
+            android:adjustViewBounds="true"
+            android:background="@drawable/ica"
+            android:elevation="1dp" />
+
+        <Button
+            android:id="@+id/coop_button"
+            android:layout_width="300dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:background="@drawable/coop" />
+
+        <Button
+            android:id="@+id/willys_button"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:background="@drawable/willys" />
+
+        <Button
+            android:id="@+id/lidl_button"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_weight="10"
+            android:background="@drawable/lidl" />
+    </LinearLayout>
+
+</RelativeLayout>

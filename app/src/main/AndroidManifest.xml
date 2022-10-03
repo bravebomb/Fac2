@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.adatest">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
 
     <application
         android:allowBackup="true"
@@ -13,6 +16,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Adatest"
         tools:targetApi="31">
+        <activity
+            android:name=".RegisterUser"
+            android:exported="false" />
+        <activity
+            android:name=".FirstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LidlActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WillysActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CoopActivity"
+            android:exported="false" />
+        <activity
+            android:name=".IcaActivity"
+            android:exported="false"
+            android:label="@string/title_activity_ica"
+            android:theme="@style/Theme.Adatest.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

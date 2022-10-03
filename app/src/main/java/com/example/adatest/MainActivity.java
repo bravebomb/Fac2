@@ -1,85 +1,56 @@
 package com.example.adatest;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.fragment.app.FragmentManager;
-import androidx.viewpager2.widget.ViewPager2;
-
-import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.tabs.TabLayout;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity {
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
-    private ViewPager2 viewPager2;
-    private TabLayout tabLayout;
-    private FragmentAdapter adapter;
-    private SearchView searchView;
+public class MainActivity extends userInfoAppActivity {
+
+    EditText loginName, loginPass;
+    String url = "https://hex.cse.kau.se/~arviblom100/getinfo.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewPager2 = findViewById(R.id.view_pager);
-        tabLayout = findViewById(R.id.tab_layout);
-        searchView = findViewById(R.id.search_view);
-        searchView.clearFocus();
-
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        Button enterButton = findViewById(R.id.enterButton);
+        TextView registerButton = findViewById(R.id.register_button);
+        loginName = findViewById(R.id.loginName);
+        loginPass = findViewById(R.id.loginPass);
+        TextView title = findViewById(R.id.titleId);
 
 
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        adapter = new FragmentAdapter(fragmentManager,getLifecycle());
-        viewPager2.setAdapter(adapter);
-
-        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+        enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                viewPager2.setCurrentItem(tab.getPosition());
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
+            public void onClick(View view) {
+                doesUserPassExistInDatabase(new VolleyCallBack() {
+                    @Override
+                    public void onSuccess() {
+                        Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                        startActivity(intent);
+                    }
+                    @Override
+                    public void onFailure() {
+                        Toast.makeText(MainActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();
+                    }
+                }, loginName.getText().toString(), loginPass.getText().toString(), MainActivity.this);
 
             }
         });
 
-        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+        registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPageSelected(int position) {
-                tabLayout.selectTab(tabLayout.getTabAt(position));
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RegisterUser.class);
+                startActivity(intent);
             }
         });
-
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
-
-            @Override
-            public boolean onQueryTextChange(String newText){
-                filterList(newText);
-                return true;
-            }
-        });
-
-    }
-
-    private void filterList(String text) {
 
     }
 }
