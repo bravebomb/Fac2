@@ -5,13 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F5F5F5"
     tools:context=".MainActivity"
     android:gravity="center">
 
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                android:background="@drawable/shoppingcartpartred96"></ImageView>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="F I S T  a n d  C R I S P"
+            android:text="S T U D E N T   H A N D E L"
             android:layout_gravity="center"
             android:textSize="30dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -24,6 +30,7 @@
             android:layout_height="wrap_content"
             android:hint="Name"
             android:id="@+id/loginName"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
             android:layout_margin="30dp"/>
         <EditText
             android:layout_width="300dp"
@@ -37,6 +44,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
             android:text="enter..."
             android:id="@+id/enterButton"
             />

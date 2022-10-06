@@ -56,7 +56,7 @@ public class ButikerFragment extends Fragment {
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(),"min notification");
                 builder.setContentTitle("hörre du");
                 builder.setContentText("Jag vet vart du bor");
-                builder.setSmallIcon(R.drawable.ica);
+                builder.setSmallIcon(R.drawable.shoppingcartpart96);
                 builder.setAutoCancel(true);
 
                 NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getActivity());
