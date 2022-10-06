@@ -1,5 +1,6 @@
 package com.example.adatest.AllFragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,9 +11,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.adatest.CoopActivity;
+import com.example.adatest.FAQActivity;
 import com.example.adatest.R;
 
 public class ProfilFragment extends Fragment {
+
+    private TextView FAQButton;
+
 
     public ProfilFragment() {
         // Required empty public constructor
@@ -23,15 +29,14 @@ public class ProfilFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_profil, container, false);
-        TextView FAQButton = view.findViewById(R.id.register_button_FAQ);
-
+        FAQButton = view.findViewById(R.id.register_button_FAQ);
         FAQButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent in = new Intent(getActivity(), FAQActivity.class);
+                startActivity(in);
             }
         });
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profil, container, false);
+        return view;
     }
 }
