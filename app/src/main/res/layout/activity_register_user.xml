@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
+    android:background="#F5F5F5"
     android:gravity="center">
 
     <TextView
@@ -49,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Name"
                 android:id="@+id/irlname"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ "
+                android:digits="abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ "
                 android:layout_margin="30dp"/>
             <EditText
                 android:layout_width="300dp"

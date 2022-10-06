@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F5F5F5"
     tools:context=".FAQActivity">
 
     <LinearLayout
         android:id="@+id/layoutfaq"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
+        android:orientation="ve rtical"
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
@@ -20,6 +21,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Hur ofta får vi in nya erbjudanden?"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="60dp"
             android:textAlignment="textStart"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -29,6 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:visibility="gone"
+            android:layout_marginLeft="20dp"
             android:text="Våre tekniker får in butikernas erbjudanden i början på varje vecka,
 så vi håller dig alltid uppdaterad!" />
 
@@ -36,6 +40,8 @@ så vi håller dig alltid uppdaterad!" />
             android:id="@+id/question2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
             android:text="Vilka butiker finns i appen?"
             android:textSize="16sp"
             android:textStyle="bold"/>
@@ -44,6 +50,7 @@ så vi håller dig alltid uppdaterad!" />
             android:id="@+id/answer2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:visibility="gone"
             android:text="Våran app visar upp erbjudanden är från Ica, Willys, Coop och hemköp." />
 
@@ -51,6 +58,8 @@ så vi håller dig alltid uppdaterad!" />
             android:id="@+id/question3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
             android:text="Vart kan man ladda ner appen?"
             android:textSize="16sp"
             android:textStyle="bold"/>
@@ -59,6 +68,7 @@ så vi håller dig alltid uppdaterad!" />
             android:id="@+id/answer3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:visibility="gone"
             android:text="Appen finns och ladda ner endast på android store och kommer framöver finnas på andra enheter." />
 
@@ -66,6 +76,8 @@ så vi håller dig alltid uppdaterad!" />
             android:id="@+id/question4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
             android:text="Hur kontaktar jag support?"
             android:textSize="16sp"
             android:textStyle="bold"/>
@@ -74,6 +86,7 @@ så vi håller dig alltid uppdaterad!" />
             android:id="@+id/answer4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:visibility="gone"
             android:text="Ring arvid han brukar svara mellan 14:00-22:00" />
     </LinearLayout>
