@@ -15,7 +15,7 @@ public class LidlActivity extends ShowImage {
 
     SearchView searchViewlidl;
     RecyclerView recyclerView;
-    String url = "https://hex.cse.kau.se/~arviblom100/getlidl.php";
+    String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
     List<Model> imagelist;
     LinearLayoutManager linearLayoutManager;
     Adapter adapter;
@@ -34,7 +34,7 @@ public class LidlActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter);
+        getImages(url,imagelist,adapter, "lidl");
 
         searchViewlidl.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

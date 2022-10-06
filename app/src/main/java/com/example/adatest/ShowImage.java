@@ -1,5 +1,6 @@
 package com.example.adatest;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,6 +9,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -19,10 +21,12 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ShowImage extends AppCompatActivity {
-    public void getImages(String url, List<Model> imagelist, Adapter adapter) {
+    public void getImages(String url, List<Model> imagelist, Adapter adapter, String store) {
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -58,7 +62,15 @@ public class ShowImage extends AppCompatActivity {
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(ShowImage.this, error.getMessage(), Toast.LENGTH_SHORT).show();
             }
-        });
+        }){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String,String> param = new HashMap<String, String>();
+                param.put("store", store);
+                return param;
+            }
+        };
         RequestQueue requestQueue = Volley.newRequestQueue(ShowImage.this);
         requestQueue.add(request);
     }

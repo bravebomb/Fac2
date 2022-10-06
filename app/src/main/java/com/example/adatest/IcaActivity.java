@@ -15,7 +15,7 @@ public class IcaActivity extends ShowImage {
 
     SearchView searchViewIca;
     RecyclerView recyclerView;
-    String url = "https://hex.cse.kau.se/~arviblom100/getica.php";
+    String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
     List<Model> imagelist;
     LinearLayoutManager linearLayoutManager;
     Adapter adapter;
@@ -34,7 +34,7 @@ public class IcaActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter);
+        getImages(url,imagelist,adapter, "ica");
 
         searchViewIca.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

@@ -17,7 +17,7 @@ public class CoopActivity extends ShowImage {
 
     SearchView searchViewCoop;
     RecyclerView recyclerView;
-    String url = "https://hex.cse.kau.se/~arviblom100/getcoop.php";
+    String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
     List<Model> imagelist;
     LinearLayoutManager linearLayoutManager;
     Adapter adapter;
@@ -36,7 +36,7 @@ public class CoopActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter);
+        getImages(url,imagelist,adapter, "coop");
 
         searchViewCoop.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

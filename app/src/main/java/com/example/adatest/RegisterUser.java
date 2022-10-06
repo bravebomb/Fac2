@@ -30,9 +30,13 @@ public class RegisterUser extends userInfoAppActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
 
-        EditText loginName, loginPass;
+        EditText loginName, loginPass, loginIrlName, loginPhone, loginDob, loginAddress;
         loginName = findViewById(R.id.registerLoginName);
         loginPass = findViewById(R.id.registerLoginPass);
+        loginIrlName = findViewById(R.id.irlname);
+        loginPhone = findViewById(R.id.phone);
+        loginDob = findViewById(R.id.dob);
+        loginAddress = findViewById(R.id.address);
         Button registerButton = findViewById(R.id.registerButton);
         String url = "https://hex.cse.kau.se/~arviblom100/Insert.php";
 
@@ -41,6 +45,10 @@ public class RegisterUser extends userInfoAppActivity {
             public void onClick(View view) {
                 String name = loginName.getText().toString();
                 String pass = loginPass.getText().toString();
+                String irlname = loginIrlName.getText().toString();
+                String phone = loginPhone.getText().toString();
+                String dob = loginDob.getText().toString();
+                String address = loginAddress.getText().toString();
                 doesUserExistInDatabase(new VolleyCallBack() {
                     @Override
                     public void onSuccess() {
@@ -54,6 +62,10 @@ public class RegisterUser extends userInfoAppActivity {
                             public void onResponse(String response) {
                                 loginName.setText("");
                                 loginPass.setText("");
+                                loginIrlName.setText("");
+                                loginPhone.setText("");
+                                loginDob.setText("");
+                                loginAddress.setText("");
 
                                 Toast.makeText(RegisterUser.this, "Success!", Toast.LENGTH_SHORT).show();
                             }
@@ -69,6 +81,10 @@ public class RegisterUser extends userInfoAppActivity {
                                 Map<String,String> param = new HashMap<String, String>();
                                 param.put("loginName", name);
                                 param.put("loginPass", pass);
+                                param.put("irlname", irlname);
+                                param.put("phone", phone);
+                                param.put("dob", dob);
+                                param.put("address", address);
                                 return param;
                             }
                         };
