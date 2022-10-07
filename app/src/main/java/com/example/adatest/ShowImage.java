@@ -33,6 +33,7 @@ public class ShowImage extends AppCompatActivity {
                 imagelist.clear();
                 Model model;
                 try{
+
                     JSONObject jsonObject = new JSONObject(response);
                     String success = jsonObject.getString("success");
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
@@ -44,7 +45,6 @@ public class ShowImage extends AppCompatActivity {
                             String urlImage = object.getString("image");
                             String name = object.getString("name");
                             String info = object.getString("info");
-
                             model = new Model(id,urlImage,name,info);
                             imagelist.add(model);
                             adapter.notifyDataSetChanged();

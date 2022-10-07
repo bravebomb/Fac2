@@ -25,7 +25,6 @@ public class MainActivity extends userInfoAppActivity {
         loginPass = findViewById(R.id.loginPass);
         TextView title = findViewById(R.id.titleId);
 
-
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
