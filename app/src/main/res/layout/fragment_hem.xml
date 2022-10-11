@@ -1,10 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AllFragments.HemFragment">
 
-</LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="HEM"
+        android:textSize="30sp" />
+
+
+    <ImageView
+        android:id="@+id/bildvisning"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="604dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/butikerknapp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="216dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="415dp"
+            android:background="@color/Fine_red"
+            android:text="Butiker" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/varorknapp"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="213dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="418dp"
+            android:layout_toEndOf="@+id/butikerknapp"
+            android:text="Alla varor" />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
