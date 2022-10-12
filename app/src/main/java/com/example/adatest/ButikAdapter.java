@@ -39,7 +39,7 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
     ArrayList<ButikerModels> butikerModels;
     String username;
     String url = "https://hex.cse.kau.se/~arviblom100/setfavstore.php";
-
+    String url2 = "https://hex.cse.kau.se/~arviblom100/isfavorite.php";
 
     public ButikAdapter(Context context, ArrayList<ButikerModels> butikerModels, RecycleViewButikerInterface recycleViewButikerInterface, String username){
         this.context = context;
@@ -87,7 +87,6 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
             imageView = itemView.findViewById(R.id.butik_bild);
             name = itemView.findViewById(R.id.butik_namn);
             favoritKnapp = itemView.findViewById(R.id.favknapp);
-
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override

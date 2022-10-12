@@ -2,14 +2,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:padding="10dp"
+    android:background="#F5F5F5">
 
     <LinearLayout
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/bebas_regular"
+            android:text="Kategorier"
+            android:textColor="@color/Fine_red"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/ic_baseline_favorite_24"
             android:layout_width="0dp"
@@ -18,9 +38,10 @@
             android:textSize="20dp"
             android:text="kött och Fisk" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -29,11 +50,13 @@
     </LinearLayout>
 
     <LinearLayout
-
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/ic_baseline_favorite_24"
             android:layout_width="0dp"
@@ -42,7 +65,8 @@
             android:textSize="20dp"
             android:text="Mejeri" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/ic_baseline_favorite_24"
             android:layout_width="0dp"
@@ -53,10 +77,13 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/ic_baseline_favorite_24"
             android:layout_width="0dp"
@@ -65,7 +92,8 @@
             android:textSize="20dp"
             android:text="Glass och Gott" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/ic_baseline_favorite_24"
             android:layout_width="0dp"
@@ -76,26 +104,30 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginRight="20dp"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/ic_baseline_favorite_24"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Vegetariskt" />
+            android:text="Vegetariskt"
+            android:background="@color/white"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/ic_baseline_favorite_24"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Veganskt" />
+            android:text="Veganskt"
+            android:background="@color/white"/>
 
 
     </LinearLayout>
