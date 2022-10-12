@@ -21,6 +21,8 @@ public class KategoriFragment extends Fragment {
     private Button coopButton;
     private Button willysButton;
     private Button lidlButton;
+    private Button vegButton;
+    private Button veganButton;
 
     public KategoriFragment() {
         // Required empty public constructor

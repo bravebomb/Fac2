@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.adatest.ButikerActivity;
 import com.example.adatest.FragmentAdapter;
@@ -19,7 +20,7 @@ import com.example.adatest.R;
 
 public class HemFragment extends Fragment {
 
-    private Button Butiker;
+    private TextView Butiker;
 
 
     public HemFragment() {

@@ -8,7 +8,6 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 import com.example.adatest.AllFragments.KategoriFragment;
 import com.example.adatest.AllFragments.FavoriterFragment;
 import com.example.adatest.AllFragments.HemFragment;
-import com.example.adatest.AllFragments.ProfilFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {
     public FragmentAdapter(@NonNull FragmentActivity fragmentActivity) {
@@ -25,8 +24,6 @@ public class FragmentAdapter extends FragmentStateAdapter {
                 return new KategoriFragment();
             case 2:
                 return new FavoriterFragment();
-            case 3:
-                return new ProfilFragment();
             default:
                 return new HemFragment();
         }
@@ -34,6 +31,6 @@ public class FragmentAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3;
     }
 }

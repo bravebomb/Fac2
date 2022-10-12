@@ -1,128 +1,103 @@
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardBackgroundColor="#F5F5F5"
-    app:cardCornerRadius="10dp"
-    android:layout_margin="5dp">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp" >
 
     <LinearLayout
-        android:layout_margin="20dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-        <LinearLayout
-            android:background="#F5F5F5"
-            android:layout_width="wrap_content"
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="kött och Fisk" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Kött och Fisk" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Frukt och grönt" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:background="#F5F5F5"
-            android:layout_width="wrap_content"
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Frukt och Grönt"/>
+    </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Mejeri produkter" />
+    <LinearLayout
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Dricka" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:background="#F5F5F5"
-            android:layout_width="wrap_content"
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Mejeri" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Glass och gott" />
-
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Bröd och kakor" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:background="#F5F5F5"
-            android:layout_width="wrap_content"
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:orientation="horizontal"
-            android:padding="10dp">
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Dricka" />
+    </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:text="Vegetariskt" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Glass och Gott" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:background="@color/white"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="Veganskt" />
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Bröd och bullar" />
+    </LinearLayout>
 
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Vegetariskt" />
+
+        <Button
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Veganskt" />
+
 
     </LinearLayout>
 
-</androidx.cardview.widget.CardView>
+</LinearLayout>

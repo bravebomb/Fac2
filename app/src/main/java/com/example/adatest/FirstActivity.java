@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -14,6 +17,7 @@ public class FirstActivity extends AppCompatActivity {
     ViewPager2 viewPager2;
     TabLayout tabLayout;
     FragmentAdapter fragmentadapter;
+    Button profilButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,5 +56,6 @@ public class FirstActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
     }
 }
