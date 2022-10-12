@@ -39,7 +39,7 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
     ArrayList<ButikerModels> butikerModels;
     String username;
     String url = "https://hex.cse.kau.se/~arviblom100/setfavstore.php";
-    String url2 = "https://hex.cse.kau.se/~arviblom100/isfavorite.php";
+
 
     public ButikAdapter(Context context, ArrayList<ButikerModels> butikerModels, RecycleViewButikerInterface recycleViewButikerInterface, String username){
         this.context = context;
@@ -87,49 +87,7 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
             imageView = itemView.findViewById(R.id.butik_bild);
             name = itemView.findViewById(R.id.butik_namn);
             favoritKnapp = itemView.findViewById(R.id.favknapp);
-            StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
-                @Override
-                public void onResponse(String response) {
-                    Model model;
-                    try{
-                        JSONObject jsonObject = new JSONObject(response);
-                        String success = jsonObject.getString("success");
-                        JSONArray jsonArray = jsonObject.getJSONArray("data");
-                        if(success.equals("1")){
-                            for(int i = 0; i < jsonArray.length(); i++){
-                                JSONObject object = jsonArray.getJSONObject(i);
-                                String storename = object.getString("storename");
-                                for(ButikerModels bModel : butikerModels){
-                                    if(bModel.getButikNamn() == storename){
-                                        bModel.setFavstatus("1");
 
-
-                                    }
-                                }
-                            }
-                        }else{
-
-                        }
-                    }catch (Exception e){
-                    }
-                }
-
-            }, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
-                }
-            }){
-                @Nullable
-                @Override
-                protected Map<String, String> getParams() throws AuthFailureError {
-                    Map<String,String> param = new HashMap<String, String>();
-                    param.put("username", username);
-                    return param;
-                }
-            };
-            RequestQueue requestQueue = Volley.newRequestQueue(context);
-            requestQueue.add(request);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
