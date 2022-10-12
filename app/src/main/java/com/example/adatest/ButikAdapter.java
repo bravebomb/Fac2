@@ -102,7 +102,7 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
                                 for(ButikerModels bModel : butikerModels){
                                     if(bModel.getButikNamn() == storename){
                                         bModel.setFavstatus("1");
-                                        favoritKnapp.setImageResource(R.drawable.ic_baseline_favorite_24);
+
 
                                     }
                                 }
