@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AllFragments.HemFragment"
     android:orientation="vertical"
     android:layout_margin="5dp"
@@ -19,7 +18,7 @@
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/ic_baseline_person_24"
             android:backgroundTint="@color/Fine_red"
             android:layout_gravity="end"/>
@@ -27,38 +26,49 @@
     </LinearLayout>
 
     <LinearLayout
-        android:background="@color/white"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="240dp"
-        android:padding="10dp"
-        app:cardCornerRadius="10dp">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="300dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:background="@drawable/icaannons"/>
 
-            <TextView
-                android:id="@+id/butikerknapp"
-                android:background="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Butiker"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="30sp" />
-        </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
 
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_marginRight="20dp"
+            android:background="@color/white"
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/store"
+            android:drawableTint="@color/Fine_red"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Butiker"
+            android:id="@+id/butikerknapp"/>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-        </LinearLayout>
-
-
+        <androidx.appcompat.widget.AppCompatButton
+            android:background="@color/white"
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/cart"
+            android:drawableTint="@color/Fine_red"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:text="Alla varor"/>
     </LinearLayout>
+    </LinearLayout>
+
+
 </LinearLayout>

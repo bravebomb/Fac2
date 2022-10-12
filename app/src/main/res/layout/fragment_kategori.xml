@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:fontFamily="@font/bebas_regular"
-            android:text="Kategorier"
+            android:text="@string/Titel"
             android:textColor="@color/Fine_red"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -31,7 +31,8 @@
             android:layout_marginRight="20dp"
             android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@drawable/foodsteak"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -41,7 +42,8 @@
         <androidx.appcompat.widget.AppCompatButton
             android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@"
+            android:drawableTop="@drawable/foodapple"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -58,7 +60,8 @@
             android:layout_marginRight="20dp"
             android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@drawable/cow"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -68,7 +71,8 @@
         <androidx.appcompat.widget.AppCompatButton
             android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@drawable/beer"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -85,17 +89,19 @@
             android:layout_marginRight="20dp"
             android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@drawable/candy"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Glass och Gott" />
+            android:text="Gott och Blandat" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:background="@color/white"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@drawable/baguette"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -111,7 +117,8 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_marginRight="20dp"
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@drawable/foodsteakoff"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -121,7 +128,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:fontFamily="@font/bebas_regular"
-            android:drawableTop="@drawable/ic_baseline_favorite_24"
+            android:drawableTop="@drawable/cowoff"
+            android:drawableTint="@color/Fine_red"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
