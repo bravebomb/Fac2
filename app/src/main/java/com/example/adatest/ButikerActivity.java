@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -15,17 +16,20 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
 
     int[] butikerBilder = {R.drawable.coop,R.drawable.coop,R.drawable.willys,R.drawable.lidl};
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_butiker);
 
+        SharedPreferences preferences = getSharedPreferences("loginNamePref", MODE_PRIVATE);
+        String userName = preferences.getString("userNameKey", "");
         RecyclerView recyclerView = findViewById(R.id.rycycler_butik);
 
         setUpButiker();
         //adapter alltid efter setup
         ButikAdapter adapter = new ButikAdapter(this,
-                butikerModels,this);
+                butikerModels,this, userName);
 
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

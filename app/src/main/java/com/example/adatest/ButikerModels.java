@@ -3,12 +3,14 @@ package com.example.adatest;
 public class ButikerModels {
     String ButikNamn;
     int bild;
-    String favstatus;
+    String favstatus = "0";
 
     public ButikerModels(String butikNamn, int bild) {
         ButikNamn = butikNamn;
         this.bild = bild;
     }
+
+
 
     public String getButikNamn() {
         return ButikNamn;
@@ -24,5 +26,9 @@ public class ButikerModels {
 
     public void setFavstatus(String favstatus) {
         this.favstatus = favstatus;
+    }
+
+    public void setBild(int bild) {
+        this.bild = bild;
     }
 }

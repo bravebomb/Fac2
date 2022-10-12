@@ -1,6 +1,8 @@
 package com.example.adatest;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,9 +12,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHolder> {
 
@@ -20,13 +37,15 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
 
     Context context;
     ArrayList<ButikerModels> butikerModels;
+    String username;
+    String url = "https://hex.cse.kau.se/~arviblom100/setfavstore.php";
+    String url2 = "https://hex.cse.kau.se/~arviblom100/isfavorite.php";
 
-
-
-    public ButikAdapter(Context context, ArrayList<ButikerModels> butikerModels, RecycleViewButikerInterface recycleViewButikerInterface){
+    public ButikAdapter(Context context, ArrayList<ButikerModels> butikerModels, RecycleViewButikerInterface recycleViewButikerInterface, String username){
         this.context = context;
         this.butikerModels = butikerModels;
         this.recycleViewButikerInterface = recycleViewButikerInterface;
+        this.username = username;
 
     }
 
@@ -68,6 +87,49 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
             imageView = itemView.findViewById(R.id.butik_bild);
             name = itemView.findViewById(R.id.butik_namn);
             favoritKnapp = itemView.findViewById(R.id.favknapp);
+            StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
+                @Override
+                public void onResponse(String response) {
+                    Model model;
+                    try{
+                        JSONObject jsonObject = new JSONObject(response);
+                        String success = jsonObject.getString("success");
+                        JSONArray jsonArray = jsonObject.getJSONArray("data");
+                        if(success.equals("1")){
+                            for(int i = 0; i < jsonArray.length(); i++){
+                                JSONObject object = jsonArray.getJSONObject(i);
+                                String storename = object.getString("storename");
+                                for(ButikerModels bModel : butikerModels){
+                                    if(bModel.getButikNamn() == storename){
+                                        bModel.setFavstatus("1");
+                                        favoritKnapp.setImageResource(R.drawable.ic_baseline_favorite_24);
+
+                                    }
+                                }
+                            }
+                        }else{
+
+                        }
+                    }catch (Exception e){
+                    }
+                }
+
+            }, new Response.ErrorListener() {
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(context, error.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            }){
+                @Nullable
+                @Override
+                protected Map<String, String> getParams() throws AuthFailureError {
+                    Map<String,String> param = new HashMap<String, String>();
+                    param.put("username", username);
+                    return param;
+                }
+            };
+            RequestQueue requestQueue = Volley.newRequestQueue(context);
+            requestQueue.add(request);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -85,10 +147,43 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
             favoritKnapp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                   int pos = getAdapterPosition();
-                   ButikerModels model = butikerModels.get(pos);
+                    //favoritKnapp.setImageResource(R.drawable.ic_baseline_favorite_24);
 
+                    int pos = getAdapterPosition();
+                    ButikerModels model = butikerModels.get(pos);
+                    if(model.getFavstatus() == "0"){
+                        favoritKnapp.setImageResource(R.drawable.ic_baseline_favorite_24);
+                        model.setFavstatus("1");
+                    } else {
+                        favoritKnapp.setImageResource(R.drawable.ic_baseline_favorite_border_24);
+                        model.setFavstatus("0");
+                    }
+
+                    StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                        @Override
+                        public void onResponse(String response) {
+
+                            Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
+                        }
+                        }, new Response.ErrorListener() {
+                        @Override
+                        public void onErrorResponse(VolleyError error) {
+                            Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+                        }
+                    }){
+                        @Nullable
+                        @Override
+                        protected Map<String, String> getParams() throws AuthFailureError {
+                            Map<String,String> param = new HashMap<String, String>();
+                            param.put("username", username);
+                            param.put("storename", model.getButikNamn());
+                            return param;
+                        }
+                    };
+                    RequestQueue requestQueue = Volley.newRequestQueue(context);
+                    requestQueue.add(request);
                 }
+
             });
         }
     }

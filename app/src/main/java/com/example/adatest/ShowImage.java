@@ -82,7 +82,6 @@ public class ShowImage extends AppCompatActivity {
                 newList.add(model);
             }
         }
-
         if(newText.isEmpty()){
             adapter.setNewList(imagelist);
         } else {

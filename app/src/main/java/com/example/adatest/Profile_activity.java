@@ -21,7 +21,7 @@ public class Profile_activity extends AppCompatActivity {
         namn = findViewById(R.id.profile_name);
 
         SharedPreferences preferences = getSharedPreferences("loginNamePref", MODE_PRIVATE);
-        String userName = (preferences.getString("userNameKey", ""));
+        String userName = preferences.getString("userNameKey", "");
         namn.setText(userName);
 
         FAQButton.setOnClickListener(new View.OnClickListener() {
