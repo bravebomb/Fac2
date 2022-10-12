@@ -17,7 +17,7 @@
         android:theme="@style/Theme.Adatest"
         tools:targetApi="31">
         <activity
-            android:name=".profile_activity"
+            android:name=".Profile_activity"
             android:exported="false" />
         <activity
             android:name=".ButikerActivity"

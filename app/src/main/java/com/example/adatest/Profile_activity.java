@@ -2,14 +2,13 @@ package com.example.adatest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-public class profile_activity extends AppCompatActivity {
+public class Profile_activity extends AppCompatActivity {
 
     TextView FAQButton, logOutButton;
     TextView namn;
@@ -28,7 +27,7 @@ public class profile_activity extends AppCompatActivity {
         FAQButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(profile_activity.this, FAQActivity.class);
+                Intent intent = new Intent(Profile_activity.this, FAQActivity.class);
                 startActivity(intent);
             }
         });
@@ -40,7 +39,7 @@ public class profile_activity extends AppCompatActivity {
                 SharedPreferences.Editor editor = preferences.edit();
                 editor.putString("remember", "false");
                 editor.apply();
-                Intent intent = new Intent(profile_activity.this, MainActivity.class);
+                Intent intent = new Intent(Profile_activity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

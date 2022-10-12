@@ -8,19 +8,23 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 
+import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.adatest.ButikerActivity;
 import com.example.adatest.FragmentAdapter;
+import com.example.adatest.Profile_activity;
 import com.example.adatest.R;
 
 public class HemFragment extends Fragment {
 
     private TextView Butiker;
+    private ImageButton profilKnapp;
 
 
     public HemFragment() {
@@ -38,6 +42,15 @@ public class HemFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(getActivity(), ButikerActivity.class);
+                startActivity(in);
+            }
+        });
+
+        profilKnapp = view.findViewById(R.id.profilButton);
+        profilKnapp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), Profile_activity.class);
                 startActivity(in);
             }
         });

@@ -61,7 +61,7 @@ public class MainActivity extends userInfoAppActivity {
                         SharedPreferences.Editor loginEditor = loginNamePref.edit();
                         loginEditor.putString("userNameKey", loginName.toString());
                         loginEditor.apply();
-                        Intent intent = new Intent(MainActivity.this, profile_activity.class);
+                        Intent intent = new Intent(MainActivity.this, FirstActivity.class);
                         startActivity(intent);
                     }
                     @Override
