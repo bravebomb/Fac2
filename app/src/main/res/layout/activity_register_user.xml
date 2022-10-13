@@ -33,7 +33,6 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="username"
-                android:inputType="textPassword"
                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
                 android:id="@+id/registerLoginName"
                 android:layout_margin="30dp"/>
@@ -64,14 +63,14 @@
                 android:layout_height="wrap_content"
                 android:hint="Date of birth (WIP)"
                 android:id="@+id/dob"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+                android:digits="1234567890 "
                 android:layout_margin="30dp"/>
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="Address"
                 android:id="@+id/address"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
+                android:digits="abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 "
                 android:layout_margin="30dp"/>
             <Button
                 android:layout_width="wrap_content"

@@ -20,10 +20,15 @@ import com.example.adatest.R;
 import com.example.adatest.VolleyCallBack;
 import com.example.adatest.userInfoAppActivity;
 
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterUser extends userInfoAppActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,11 +49,17 @@ public class RegisterUser extends userInfoAppActivity {
             @Override
             public void onClick(View view) {
                 String name = loginName.getText().toString();
-                String pass = loginPass.getText().toString();
+                //String pass = loginPass.getText().toString();
+                //pass = encrypt(pass.getBytes());
+                String pass = encrypt(loginPass.getText().toString().getBytes());
                 String irlname = loginIrlName.getText().toString();
                 String phone = loginPhone.getText().toString();
                 String dob = loginDob.getText().toString();
                 String address = loginAddress.getText().toString();
+
+
+
+
                 doesUserExistInDatabase(new VolleyCallBack() {
                     @Override
                     public void onSuccess() {

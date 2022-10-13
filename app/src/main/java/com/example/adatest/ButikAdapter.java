@@ -120,12 +120,11 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
                         @Override
                         public void onResponse(String response) {
 
-                            Toast.makeText(context, response, Toast.LENGTH_SHORT).show();
                         }
                         }, new Response.ErrorListener() {
                         @Override
                         public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(context, error.toString(), Toast.LENGTH_SHORT).show();
+
                         }
                     }){
                         @Nullable
