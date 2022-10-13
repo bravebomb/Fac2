@@ -72,7 +72,7 @@ public class MainActivity extends userInfoAppActivity {
                         editor.apply();
                         Toast.makeText(MainActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();
                     }
-                }, loginName.getText().toString(), loginPass.getText().toString(), MainActivity.this);
+                }, loginName.getText().toString(), encrypt(loginPass.getText().toString().getBytes()), MainActivity.this);
 
             }
         });
