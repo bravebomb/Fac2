@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
 import com.example.adatest.AllFragments.KategoriFragment;
-import com.example.adatest.AllFragments.FavoriterFragment;
+import com.example.adatest.AllFragments.SettingsFragment;
 import com.example.adatest.AllFragments.HemFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {
@@ -23,7 +23,7 @@ public class FragmentAdapter extends FragmentStateAdapter {
             case 1:
                 return new KategoriFragment();
             case 2:
-                return new FavoriterFragment();
+                return new SettingsFragment();
             default:
                 return new HemFragment();
         }
