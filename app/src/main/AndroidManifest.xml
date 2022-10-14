@@ -32,7 +32,7 @@
             android:name=".FirstActivity"
             android:exported="false" />
         <activity
-            android:name=".LidlActivity"
+            android:name=".HemkopActivity"
             android:exported="false" />
         <activity
             android:name=".WillysActivity"

@@ -34,7 +34,7 @@ public class IcaActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter, "ica");
+        getImages(url,imagelist,adapter, "store", "ica");
 
         searchViewIca.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

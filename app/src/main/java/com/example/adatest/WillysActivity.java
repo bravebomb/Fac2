@@ -34,7 +34,7 @@ public class WillysActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter, "willys");
+        getImages(url,imagelist,adapter, "store","willys");
 
         searchViewWillys.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

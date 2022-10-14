@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ShowImage extends AppCompatActivity {
-    public void getImages(String url, List<Model> imagelist, Adapter adapter, String store) {
+    public void getImages(String url, List<Model> imagelist, Adapter adapter, String attribute, String searchWord) {
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -67,7 +67,8 @@ public class ShowImage extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> param = new HashMap<String, String>();
-                param.put("store", store);
+                param.put("attribute", attribute);
+                param.put("searchWord", searchWord);
                 return param;
             }
         };

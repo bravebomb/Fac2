@@ -36,7 +36,7 @@ public class CoopActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter, "coop");
+        getImages(url,imagelist,adapter, "store","coop");
 
         searchViewCoop.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

@@ -127,7 +127,7 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
                 startActivity(intent);
                 break;
             case 3:
-                intent = new Intent(this, LidlActivity.class);
+                intent = new Intent(this, HemkopActivity.class);
                 startActivity(intent);
                 break;
         }

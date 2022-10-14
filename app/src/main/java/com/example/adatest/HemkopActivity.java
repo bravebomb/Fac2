@@ -10,7 +10,7 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LidlActivity extends ShowImage {
+public class HemkopActivity extends ShowImage {
 
 
     SearchView searchViewlidl;
@@ -34,7 +34,7 @@ public class LidlActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter, "lidl");
+        getImages(url,imagelist,adapter, "store","hemkop");
 
         searchViewlidl.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
