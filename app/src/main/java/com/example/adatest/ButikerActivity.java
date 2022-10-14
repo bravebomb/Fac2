@@ -41,6 +41,7 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
 
         SharedPreferences preferences = getSharedPreferences("loginNamePref", MODE_PRIVATE);
         String userName = preferences.getString("userNameKey", "");
+
         RecyclerView recyclerView = findViewById(R.id.rycycler_butik);
 
         setUpButiker();
@@ -48,9 +49,6 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
         ButikAdapter adapter = new ButikAdapter(this,
                 butikerModels,this, userName);
 
-
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
             @Override
@@ -99,8 +97,11 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
         };
         RequestQueue requestQueue = Volley.newRequestQueue(ButikerActivity.this);
         requestQueue.add(request);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
+
 
     private void setUpButiker(){
         String[] butikNamn = getResources().getStringArray(R.array.Butiknamn);
