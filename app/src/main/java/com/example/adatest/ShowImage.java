@@ -40,11 +40,11 @@ public class ShowImage extends AppCompatActivity {
                     if(success.equals("1")){
                         for(int i = 0; i <jsonArray.length(); i++){
                             JSONObject object = jsonArray.getJSONObject(i);
-
                             String id = object.getString("id");
                             String urlImage = object.getString("image");
                             String name = object.getString("name");
                             String info = object.getString("info");
+                            info = info.concat(":-");
                             model = new Model(id,urlImage,name,info);
                             imagelist.add(model);
                             adapter.notifyDataSetChanged();
