@@ -1,39 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardCornerRadius="5dp">
-
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="5dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        >
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="info"
-            android:id="@+id/infotvimg"
-            android:textSize="20dp"
-            android:padding="4dp"
-            android:textColor="@android:color/black"/>
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="name"
-            android:id="@+id/nametvimg"
-            android:textSize="20dp"
-            android:padding="4dp"
-            android:textColor="@android:color/black"/>
+            android:layout_height="wrap_content">
 
-        <ImageView
+            <androidx.cardview.widget.CardView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                app:cardPreventCornerOverlap="false"
+                app:cardCornerRadius="35dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/iv_retrieve"
+                    android:clickable="true"
+                    android:scaleType="fitCenter"/>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nametvimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/darker_gray"
+                android:text="namn"
+                android:layout_gravity="end"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/infotvimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:textColor="@android:color/darker_gray"
+                android:text="pris"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:id="@+id/iv_retrieve"
-            android:scaleType="centerCrop"
-            />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
+
 </androidx.cardview.widget.CardView>
