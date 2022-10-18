@@ -10,7 +10,7 @@
     android:background="#F5F5F5">
 
 <LinearLayout
-    android:background="@color/white"
+    android:background="@drawable/layout_bg"
     android:layout_marginTop="100dp"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
@@ -21,7 +21,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/settings_titel1"/>
+        android:text="@string/settings_titel1"
+        android:textColor="@color/Fine_red"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="15dp"/>
 
 
     <androidx.appcompat.widget.AppCompatButton
@@ -29,9 +32,11 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="@string/settings_lang"
+        android:background="@color/white"
         android:textAllCaps="false"
         android:textAlignment="textStart"
-        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:drawableTint="@color/Fine_red" />
 
 </LinearLayout>
 

@@ -29,7 +29,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_marginRight="20dp"
-            android:background="@color/white"
+            android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/foodsteak"
             android:drawableTint="@color/Fine_red"
@@ -58,7 +58,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_marginRight="20dp"
-            android:background="@color/white"
+            android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/cow"
             android:drawableTint="@color/Fine_red"
@@ -69,7 +69,7 @@
             android:text="@string/cat_mej" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:background="@color/white"
+            android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/beer"
             android:drawableTint="@color/Fine_red"
@@ -87,7 +87,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_marginRight="20dp"
-            android:background="@color/white"
+            android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/candy"
             android:drawableTint="@color/Fine_red"
@@ -98,7 +98,7 @@
             android:text="@string/cat_sweets" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:background="@color/white"
+            android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/baguette"
             android:drawableTint="@color/Fine_red"
@@ -124,7 +124,7 @@
             android:layout_weight="1"
             android:textSize="20dp"
             android:text="@string/cat_veg"
-            android:background="@color/white"/>
+            android:background="@drawable/layout_bg"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:fontFamily="@font/bebas_regular"
@@ -135,7 +135,7 @@
             android:layout_weight="1"
             android:textSize="20dp"
             android:text="@string/cat_vegan"
-            android:background="@color/white"/>
+            android:background="@drawable/layout_bg"/>
 
 
     </LinearLayout>
