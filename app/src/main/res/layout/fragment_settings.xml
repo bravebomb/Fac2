@@ -6,38 +6,45 @@
     android:layout_height="match_parent"
     tools:context=".AllFragments.SettingsFragment"
     android:orientation="vertical"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:background="#F5F5F5">
 
 <LinearLayout
+    android:background="@color/white"
     android:layout_marginTop="100dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
+
     <TextView
-        android:id="@+id/txttitle"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Change Languages"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_titel1"/>
+
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/u"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="uuu"/>
-
-    <Spinner
-        android:background="@color/white"
-        android:id="@+id/settingsspinner"
+        android:id="@+id/settings_sprak"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txttitle"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginTop="10dp"/>
+        android:layout_height="50dp"
+        android:text="@string/settings_lang"
+        android:textAllCaps="false"
+        android:textAlignment="textStart"
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"/>
 
 </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+    </LinearLayout>
 
 </LinearLayout>

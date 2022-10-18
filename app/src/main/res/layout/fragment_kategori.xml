@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="kött och Fisk" />
+            android:text="@string/kat_meat" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:background="@color/white"
@@ -48,7 +48,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Frukt och Grönt"/>
+            android:text="@string/cat_green"/>
     </LinearLayout>
 
     <LinearLayout
@@ -66,7 +66,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Mejeri" />
+            android:text="@string/cat_mej" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:background="@color/white"
@@ -77,7 +77,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Dricka" />
+            android:text="@string/cat_drink" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,7 +95,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Gott och Blandat" />
+            android:text="@string/cat_sweets" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:background="@color/white"
@@ -106,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Bröd och bullar" />
+            android:text="@string/cat_bread" />
     </LinearLayout>
 
     <LinearLayout
@@ -123,7 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Vegetariskt"
+            android:text="@string/cat_veg"
             android:background="@color/white"/>
 
         <androidx.appcompat.widget.AppCompatButton
@@ -134,7 +134,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:textSize="20dp"
-            android:text="Veganskt"
+            android:text="@string/cat_vegan"
             android:background="@color/white"/>
 
 

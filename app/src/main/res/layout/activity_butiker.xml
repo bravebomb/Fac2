@@ -20,7 +20,7 @@
         android:layout_marginEnd="38dp"
         android:fontFamily="@font/bebas_regular"
         android:lineSpacingExtra="8sp"
-        android:text="@string/butiker"
+        android:text="@string/butiker_i_butiker"
         android:textAlignment="center"
         android:textColor="@color/Fine_red"
         android:textSize="48sp"

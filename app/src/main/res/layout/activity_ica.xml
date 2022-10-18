@@ -34,7 +34,7 @@
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp"
             android:background="@drawable/search_view_bg"
-            app:queryHint="search ..."
+            app:queryHint="@string/search"
             app:iconifiedByDefault="false">
         </androidx.appcompat.widget.SearchView>
 

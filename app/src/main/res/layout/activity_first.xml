@@ -19,19 +19,19 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hem" />
+            android:text="@string/tablayout_hem" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bebas_regular"
-            android:text="Kategorier" />
+            android:text="@string/tablayout_cat" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/bebas_regular"
-            android:text="Favoriter" />
+            android:text="@string/tablayout_sett" />
 
     </com.google.android.material.tabs.TabLayout>
 

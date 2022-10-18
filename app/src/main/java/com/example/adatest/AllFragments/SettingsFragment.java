@@ -19,12 +19,13 @@ import android.widget.Spinner;
 
 import com.bumptech.glide.load.engine.Resource;
 import com.example.adatest.R;
+import com.example.adatest.SprakActivity;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class SettingsFragment extends Fragment implements AdapterView.OnItemSelectedListener {
+public class SettingsFragment extends Fragment {
 
     private Spinner spinner;
     private Button button;
@@ -38,33 +39,18 @@ public class SettingsFragment extends Fragment implements AdapterView.OnItemSele
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
-        spinner = view.findViewById(R.id.settingsspinner);
-        button = view.findViewById(R.id.u);
-        String[] languages = getResources().getStringArray(R.array.languages);
-        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_item, languages);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        button = view.findViewById(R.id.settings_sprak);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setAppLocale("sv");
-                getActivity().recreate();
+                Intent in = new Intent(getActivity(), SprakActivity.class);
+                startActivity(in);
             }
         });
 
         return view;
     }
 
-    @Override
-    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
-            setAppLocale("sv");
-            getActivity().recreate();
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
-    }
 
     private void setAppLocale(String localeCode){
         Resources res = getActivity().getResources();

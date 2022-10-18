@@ -48,10 +48,6 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
         ButikAdapter adapter = new ButikAdapter(this,
                 butikerModels,this, userName);
 
-
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
         StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -99,6 +95,8 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
         };
         RequestQueue requestQueue = Volley.newRequestQueue(ButikerActivity.this);
         requestQueue.add(request);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
 
