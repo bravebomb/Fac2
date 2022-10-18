@@ -43,4 +43,5 @@
     <string name="cat_vegan">Veganskt</string>
     <string name="settings_lang">Språkbytning</string>
     <string name="settings_titel1">Inställningar</string>
+    <string name="hem_favobutik">Mina favorit butiker</string>
 </resources>

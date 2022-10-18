@@ -71,7 +71,6 @@ public class SprakActivity extends AppCompatActivity {
 
     private void setAppLocale(String localeCode){
         Lingver.getInstance().setLocale(this, localeCode);
-        MainActivity.startaOm();
         Intent starterIntent = getIntent();
         finish();
         startActivity(starterIntent);

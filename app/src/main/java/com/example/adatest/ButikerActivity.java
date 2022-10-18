@@ -41,6 +41,7 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
 
         SharedPreferences preferences = getSharedPreferences("loginNamePref", MODE_PRIVATE);
         String userName = preferences.getString("userNameKey", "");
+
         RecyclerView recyclerView = findViewById(R.id.rycycler_butik);
 
         setUpButiker();
@@ -99,6 +100,7 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
     }
+
 
     private void setUpButiker(){
         String[] butikNamn = getResources().getStringArray(R.array.Butiknamn);

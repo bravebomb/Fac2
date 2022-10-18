@@ -73,6 +73,10 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
         return butikerModels.size();
     }
 
+    public void update(){
+        notifyDataSetChanged();
+    }
+
     public class ButikViewHolder extends RecyclerView.ViewHolder{
         // grabbing the views from our layout file
         // kinda like in the onCreate method
