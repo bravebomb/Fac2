@@ -1,5 +1,9 @@
 package com.example.adatest;
 
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -15,6 +19,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Calendar;
 import java.util.Locale;
 
 
@@ -30,6 +35,19 @@ public class MainActivity extends userInfoAppActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        createNotificationChannel();
+        Intent notifyintent = new Intent(MainActivity.this, ReminderBroadcast.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, notifyintent, 0);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        long timeAtButtonClick = System.currentTimeMillis();
+        long tenSecondsInMillis = 1000 * 10;
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.HOUR_OF_DAY,1);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
+
 
         Button enterButton = findViewById(R.id.enterButton);
         TextView registerButton = findViewById(R.id.register_button);
@@ -102,6 +120,19 @@ public class MainActivity extends userInfoAppActivity {
             }
         });
 
+    }
+
+    private void createNotificationChannel(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
+        {
+            CharSequence name = "StoreReminderChannel";
+            String description = "Channel for Lemubit Reminder";
+            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            NotificationChannel channel = new NotificationChannel("notifyStore", name, importance);
+            channel.setDescription(description);
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
     }
 
 }

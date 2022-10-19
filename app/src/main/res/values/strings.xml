@@ -44,6 +44,7 @@
     <string name="settings_lang">Change language</string>
     <string name="settings_titel1">Settings</string>
     <string name="hem_favobutik">My favortie stores</string>
+    <string name="cat_extra">Extra</string>
 
 
     <string-array name="Butiknamn">

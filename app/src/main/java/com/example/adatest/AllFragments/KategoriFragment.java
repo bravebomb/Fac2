@@ -2,6 +2,7 @@ package com.example.adatest.AllFragments;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -12,17 +13,29 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.example.adatest.BreadActivity;
+import com.example.adatest.DairyActivity;
+import com.example.adatest.DrinkActivity;
+import com.example.adatest.ExtraActivity;
+import com.example.adatest.GreensActivity;
+import com.example.adatest.MeatActivity;
 import com.example.adatest.R;
+import com.example.adatest.SweetsActivity;
+import com.example.adatest.VeganActivity;
+import com.example.adatest.VegetarianActivity;
 
 
 public class KategoriFragment extends Fragment {
 
-    private Button icaButton;
-    private Button coopButton;
-    private Button willysButton;
-    private Button lidlButton;
-    private Button vegButton;
-    private Button veganButton;
+    private Button meat;
+    private Button bread;
+    private Button drink;
+    private Button dairy;
+    private Button sweets;
+    private Button green;
+    private Button vegeterian;
+    private Button vegan;
+    private Button extra;
 
     public KategoriFragment() {
         // Required empty public constructor
@@ -44,54 +57,97 @@ public class KategoriFragment extends Fragment {
         }
 
 
-       /* icaButton = view.findViewById(R.id.ica_button);
-        icaButton.setOnClickListener(new View.OnClickListener() {
+       meat = view.findViewById(R.id.meatbutton);
+        meat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(),"min notification");
+               /* NotificationCompat.Builder builder = new NotificationCompat.Builder(getActivity(),"min notification");
                 builder.setContentTitle("hörre du");
                 builder.setContentText("Jag vet vart du bor");
                 builder.setSmallIcon(R.drawable.shoppingcartpart96);
                 builder.setAutoCancel(true);
 
                 NotificationManagerCompat managerCompat = NotificationManagerCompat.from(getActivity());
-                managerCompat.notify(1,builder.build());
+                managerCompat.notify(1,builder.build());*/
 
-                Intent in = new Intent(getActivity(), IcaActivity.class);
+                Intent in = new Intent(getActivity(), MeatActivity.class);
                 startActivity(in);
 
             }
         });
 
-        coopButton = view.findViewById(R.id.coop_button);
-        coopButton.setOnClickListener(new View.OnClickListener() {
+        green = view.findViewById(R.id.greensbutton);
+        green.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), CoopActivity.class);
+                Intent in = new Intent(getActivity(), GreensActivity.class);
                 startActivity(in);
             }
         });
 
-        willysButton = view.findViewById(R.id.willys_button);
-        willysButton.setOnClickListener(new View.OnClickListener() {
+        bread = view.findViewById(R.id.breadbutton);
+        bread.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), WillysActivity.class);
+                Intent in = new Intent(getActivity(), BreadActivity.class);
                 startActivity(in);
             }
         });
 
-        lidlButton = view.findViewById(R.id.lidl_button);
-        lidlButton.setOnClickListener(new View.OnClickListener() {
+        drink = view.findViewById(R.id.drinkbutton);
+        drink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent in = new Intent(getActivity(), LidlActivity.class);
+                Intent in = new Intent(getActivity(), DrinkActivity.class);
                 startActivity(in);
             }
         });
 
-        return view;
-    }*/
+        dairy = view.findViewById(R.id.dairybutton);
+        dairy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), DairyActivity.class);
+                startActivity(in);
+            }
+        });
+
+        vegeterian = view.findViewById(R.id.vegetarianbutton);
+        vegeterian.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), VegetarianActivity.class);
+                startActivity(in);
+            }
+        });
+
+        vegan = view.findViewById(R.id.veganbutton);
+        vegan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), VeganActivity.class);
+                startActivity(in);
+            }
+        });
+
+        sweets = view.findViewById(R.id.sweetsbutton);
+        sweets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), SweetsActivity.class);
+                startActivity(in);
+            }
+        });
+
+        extra = view.findViewById(R.id.extra_button);
+        extra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), ExtraActivity.class);
+                startActivity(in);
+            }
+        });
+
         return view;
     }
 }

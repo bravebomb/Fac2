@@ -31,7 +31,7 @@ public class ButikerActivity extends AppCompatActivity implements RecycleViewBut
 
     ArrayList<ButikerModels> butikerModels = new ArrayList<>();
 
-    int[] butikerBilder = {R.drawable.coop,R.drawable.coop,R.drawable.willys,R.drawable.lidl};
+    int[] butikerBilder = {R.drawable.ica,R.drawable.coop,R.drawable.willys,R.drawable.hemkop};
     String url2 = "https://hex.cse.kau.se/~arviblom100/isfavorite.php";
 
     @Override

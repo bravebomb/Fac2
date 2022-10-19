@@ -60,7 +60,7 @@ public class HemFragment extends Fragment implements RecycleViewButikerInterface
     private ImageButton profilKnapp;
     RecyclerView recyclerView;
     ArrayList<ButikerModels> butikerModels = new ArrayList<>();
-    int[] butikerBilder = {R.drawable.coop,R.drawable.coop,R.drawable.willys,R.drawable.lidl};
+    int[] butikerBilder = {R.drawable.ica,R.drawable.coop,R.drawable.willys,R.drawable.hemkop};
     String url2 = "https://hex.cse.kau.se/~arviblom100/isfavorite.php";
     String _response;
     String userName;
@@ -140,15 +140,15 @@ public class HemFragment extends Fragment implements RecycleViewButikerInterface
     private int getStoreImage(String name){
         switch (name){
             case "Ica":
-                return R.drawable.coop;
+                return R.drawable.ica;
             case "Coop":
                 return R.drawable.coop;
             case "Willys":
                 return R.drawable.willys;
             case "Hemköp":
-                return R.drawable.lidl;
+                return R.drawable.hemkop;
             default:
-                return R.drawable.coop;
+                return R.drawable.ica;
         }
     }
     @Override

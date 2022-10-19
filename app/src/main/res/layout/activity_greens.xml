@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".WillysActivity">
+
+    <LinearLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Greens"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:fontFamily="@font/bebas_regular"
+            android:textColor="@color/Fine_red"/>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_view_willys"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/search_view_bg"
+            app:queryHint="@string/search"
+            app:iconifiedByDefault="false">
+        </androidx.appcompat.widget.SearchView>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="10dp"
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

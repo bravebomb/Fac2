@@ -28,6 +28,7 @@
         android:layout_height="wrap_content" >
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/meatbutton"
             android:layout_marginRight="20dp"
             android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
@@ -40,7 +41,8 @@
             android:text="@string/kat_meat" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:background="@color/white"
+            android:id="@+id/greensbutton"
+            android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/foodapple"
             android:drawableTint="@color/Fine_red"
@@ -57,6 +59,7 @@
         android:layout_height="wrap_content" >
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/dairybutton"
             android:layout_marginRight="20dp"
             android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
@@ -69,6 +72,7 @@
             android:text="@string/cat_mej" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/drinkbutton"
             android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/beer"
@@ -87,6 +91,7 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_marginRight="20dp"
+            android:id="@+id/sweetsbutton"
             android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/candy"
@@ -98,6 +103,7 @@
             android:text="@string/cat_sweets" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/breadbutton"
             android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/baguette"
@@ -115,6 +121,7 @@
         android:layout_height="wrap_content" >
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/vegetarianbutton"
             android:layout_marginRight="20dp"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/foodsteakoff"
@@ -127,6 +134,7 @@
             android:background="@drawable/layout_bg"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/veganbutton"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/cowoff"
             android:drawableTint="@color/Fine_red"
@@ -136,7 +144,27 @@
             android:textSize="20dp"
             android:text="@string/cat_vegan"
             android:background="@drawable/layout_bg"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/extra_button"
+            android:fontFamily="@font/bebas_regular"
+            android:drawableTop="@drawable/ic_baseline_more_horiz_24"
+            android:drawableTint="@color/Fine_red"
+            android:layout_width="0dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textSize="20dp"
+            android:text="@string/cat_extra"
+            android:background="@drawable/layout_bg"/>
 
     </LinearLayout>
 
