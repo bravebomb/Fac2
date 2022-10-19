@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SprakActivity"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#F5F5F5">
 
     <ImageView
         android:layout_gravity="center"
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
             <TextView
+                android:textColor="@color/Fine_red"
                 android:id="@+id/txttitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -38,6 +40,8 @@
                 android:layout_marginTop="10dp"/>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_bg"
                 android:id="@+id/u"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"

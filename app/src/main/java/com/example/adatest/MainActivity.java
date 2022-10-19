@@ -37,17 +37,20 @@ public class MainActivity extends userInfoAppActivity {
         setContentView(R.layout.activity_main);
 
         createNotificationChannel();
-        Intent notifyintent = new Intent(MainActivity.this, ReminderBroadcast.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, notifyintent, 0);
-        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         long timeAtButtonClick = System.currentTimeMillis();
         long tenSecondsInMillis = 1000 * 10;
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY,1);
-        calendar.set(Calendar.MINUTE, 0);
+        while (calendar.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY){
+            calendar.add(Calendar.DATE, 1);
+        }
+        calendar.set(Calendar.HOUR_OF_DAY,12);
+        calendar.set(Calendar.MINUTE, 30);
         calendar.set(Calendar.SECOND, 0);
-        alarmManager.set(AlarmManager.RTC_WAKEUP,calendar.getTimeInMillis(),pendingIntent);
-
+        calendar.set(Calendar.MILLISECOND, 0);
+        Intent notifyintent = new Intent(MainActivity.this, ReminderBroadcast.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, notifyintent, 0);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        alarmManager.setRepeating(alarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), alarmManager.INTERVAL_DAY * 7, pendingIntent);
 
         Button enterButton = findViewById(R.id.enterButton);
         TextView registerButton = findViewById(R.id.register_button);

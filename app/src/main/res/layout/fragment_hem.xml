@@ -59,6 +59,7 @@
             android:id="@+id/butikerknapp"/>
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/allproductknapp"
             android:background="@drawable/layout_bg"
             android:fontFamily="@font/bebas_regular"
             android:drawableTop="@drawable/cart"

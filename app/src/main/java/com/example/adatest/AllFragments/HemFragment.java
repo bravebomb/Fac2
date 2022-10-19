@@ -31,6 +31,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.adatest.AllpActivity;
 import com.example.adatest.ButikAdapter;
 import com.example.adatest.ButikerActivity;
 import com.example.adatest.ButikerModels;
@@ -57,6 +58,7 @@ import java.util.Map;
 public class HemFragment extends Fragment implements RecycleViewButikerInterface {
 
     private TextView Butiker;
+    private TextView allproduct;
     private ImageButton profilKnapp;
     RecyclerView recyclerView;
     ArrayList<ButikerModels> butikerModels = new ArrayList<>();
@@ -77,20 +79,23 @@ public class HemFragment extends Fragment implements RecycleViewButikerInterface
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_hem, container, false);
         Butiker = view.findViewById(R.id.butikerknapp);
+        allproduct = view.findViewById(R.id.allproductknapp);
         recyclerView = view.findViewById(R.id.recyclerHem);
         SharedPreferences preferences = getContext().getSharedPreferences("loginNamePref", MODE_PRIVATE);
         userName = preferences.getString("userNameKey", "");
-
-
-
-
-        //setUpButiker();
-
 
         Butiker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent in = new Intent(getActivity(), ButikerActivity.class);
+                startActivity(in);
+            }
+        });
+
+        allproduct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in = new Intent(getActivity(), AllpActivity.class);
                 startActivity(in);
             }
         });
