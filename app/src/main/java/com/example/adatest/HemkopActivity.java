@@ -15,7 +15,6 @@ public class HemkopActivity extends ShowImage {
 
     SearchView searchViewlidl;
     RecyclerView recyclerView;
-    String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
     List<Model> imagelist;
     LinearLayoutManager linearLayoutManager;
     Adapter adapter;
@@ -34,7 +33,7 @@ public class HemkopActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter, "store","hemkop");
+        getImages(imagelist,adapter, "store","hemkop");
 
         searchViewlidl.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

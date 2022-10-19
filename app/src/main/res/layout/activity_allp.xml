@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
-    tools:context=".WillysActivity">
+    tools:context=".AllpActivity">
 
     <LinearLayout
         android:id="@+id/relativeLayout1"
@@ -19,7 +19,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All Products"
+            android:text="@string/Home_products"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:textSize="30dp"
@@ -27,7 +27,7 @@
             android:textColor="@color/Fine_red"/>
 
         <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_view_willys"
+            android:id="@+id/search_view_vegan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"

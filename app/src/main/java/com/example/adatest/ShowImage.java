@@ -26,7 +26,8 @@ import java.util.List;
 import java.util.Map;
 
 public class ShowImage extends AppCompatActivity {
-    public void getImages(String url, List<Model> imagelist, Adapter adapter, String attribute, String searchWord) {
+    public void getImages(List<Model> imagelist, Adapter adapter, String attribute, String searchWord) {
+        String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -44,8 +45,9 @@ public class ShowImage extends AppCompatActivity {
                             String urlImage = object.getString("image");
                             String name = object.getString("name");
                             String info = object.getString("info");
+                            String store = object.getString("store");
                             info = info.concat(":-");
-                            model = new Model(id,urlImage,name,info);
+                            model = new Model(id,urlImage,name,info, store);
                             imagelist.add(model);
                             adapter.notifyDataSetChanged();
 
