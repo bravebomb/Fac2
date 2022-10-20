@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context=".RegisterUser"
     android:background="#F5F5F5"
     android:gravity="center">
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register_titel"
         android:layout_gravity="center"
+        android:textColor="@color/Fine_red"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,21 +60,37 @@
                 android:id="@+id/phone"
                 android:digits="1234567890"
                 android:layout_margin="30dp"/>
-            <EditText
+            <TextView
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/register_date"
                 android:id="@+id/dob"
                 android:digits="1234567890 "
-                android:layout_margin="30dp"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/datepicker"
+                android:layout_marginLeft="30dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="JAN 01 2020"
+                android:textSize="20dp"
+                style="?android:spinnerStyle"
+                android:onClick="openDatePicker"
+                />
+
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/register_adress"
                 android:id="@+id/address"
                 android:digits="abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 "
-                android:layout_margin="30dp"/>
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"/>
+
             <Button
+                android:layout_marginTop="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"

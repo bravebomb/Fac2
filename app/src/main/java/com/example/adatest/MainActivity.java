@@ -1,6 +1,8 @@
 package com.example.adatest;
 
 import android.app.AlarmManager;
+import android.app.AlertDialog;
+import android.app.DatePickerDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -15,6 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -40,10 +43,10 @@ public class MainActivity extends userInfoAppActivity {
         long timeAtButtonClick = System.currentTimeMillis();
         long tenSecondsInMillis = 1000 * 10;
         Calendar calendar = Calendar.getInstance();
-        while (calendar.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY){
+        while (calendar.get(Calendar.DAY_OF_WEEK) != Calendar.MONDAY) {
             calendar.add(Calendar.DATE, 1);
         }
-        calendar.set(Calendar.HOUR_OF_DAY,12);
+        calendar.set(Calendar.HOUR_OF_DAY, 12);
         calendar.set(Calendar.MINUTE, 30);
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
@@ -66,10 +69,10 @@ public class MainActivity extends userInfoAppActivity {
         String checkbox = preferences.getString("remember", "");
 
 
-        if(checkbox.equals("true")){
+        if (checkbox.equals("true")) {
             Intent intent = new Intent(MainActivity.this, FirstActivity.class);
             startActivity(intent);
-        }else if(checkbox.equals(false)){
+        } else if (checkbox.equals(false)) {
 
         }
 
@@ -79,7 +82,7 @@ public class MainActivity extends userInfoAppActivity {
                 doesUserPassExistInDatabase(new VolleyCallBack() {
                     @Override
                     public void onSuccess() {
-                        if(isCheckboxChecked){
+                        if (isCheckboxChecked) {
                             SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
                             SharedPreferences.Editor editor = preferences.edit();
                             editor.putString("remember", "true");
@@ -91,6 +94,7 @@ public class MainActivity extends userInfoAppActivity {
                         Intent intent = new Intent(MainActivity.this, FirstActivity.class);
                         startActivity(intent);
                     }
+
                     @Override
                     public void onFailure() {
                         SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
@@ -107,9 +111,9 @@ public class MainActivity extends userInfoAppActivity {
         checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if(compoundButton.isChecked()){
+                if (compoundButton.isChecked()) {
                     isCheckboxChecked = true;
-                }else if(!compoundButton.isChecked()){
+                } else if (!compoundButton.isChecked()) {
                     isCheckboxChecked = false;
                 }
             }
@@ -125,9 +129,9 @@ public class MainActivity extends userInfoAppActivity {
 
     }
 
-    private void createNotificationChannel(){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O)
-        {
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "StoreReminderChannel";
             String description = "Channel for Lemubit Reminder";
             int importance = NotificationManager.IMPORTANCE_DEFAULT;
@@ -137,5 +141,5 @@ public class MainActivity extends userInfoAppActivity {
             notificationManager.createNotificationChannel(channel);
         }
     }
-
 }
+
