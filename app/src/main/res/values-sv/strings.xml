@@ -24,7 +24,7 @@
     <string name="login_register">Skapa ny användare</string>
     <string name="profile_logout">logga ut</string>
     <string name="register_titel">Skapa ny användare</string>
-    <string name="register_username">Användarnamn</string>
+    <string name="register_email">email</string>
     <string name="register_password">Lösenord</string>
     <string name="register_namn">Namn</string>
     <string name="register_phone">Telefon</string>

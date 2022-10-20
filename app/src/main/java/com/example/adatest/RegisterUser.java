@@ -106,7 +106,7 @@ public class RegisterUser extends userInfoAppActivity {
                                     param.put("loginPass", pass);
                                     param.put("irlname", irlname);
                                     param.put("phone", phone);
-                                    param.put("dob", dateButton.getText());
+                                    param.put("dob", dateButton.getText().toString());
                                     param.put("address", address);
                                     return param;
                                 }
@@ -115,7 +115,7 @@ public class RegisterUser extends userInfoAppActivity {
                             requestQueue.add(request);
                         }
                     }
-                }, loginName.getText().toString(), loginPass.getText().toString(), RegisterUser.this);
+                }, loginName.getText().toString(), RegisterUser.this);
             }
         });
 
@@ -192,6 +192,4 @@ public class RegisterUser extends userInfoAppActivity {
         public void openDatePicker(View view) {
             datePickerDialog.show();
         }
-    }
-
 }

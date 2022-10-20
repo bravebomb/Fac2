@@ -30,20 +30,21 @@ public class ForgotPassword extends userInfoAppActivity {
         setContentView(R.layout.activity_forgot_password);
         Button sendButton = findViewById(R.id.sendButton);
         EditText email = findViewById(R.id.email);
-        String emailAddress = email.getText().toString();
-        String url = "https://hex.cse.kau.se/~arviblom100/setRecoveryCode.php";
 
-        Random rnd = new Random();
-        int n = 100000 + rnd.nextInt(900000);
-        String randomCode = "" + n;
+        String url = "https://hex.cse.kau.se/~arviblom100/setRecoveryCode.php";
 
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(ForgotPassword.this, "Sent reset instructions if user exists!", Toast.LENGTH_SHORT).show();
+                String emailAddress = email.getText().toString();
+                Random rnd = new Random();
+                int n = 100000 + rnd.nextInt(900000);
+                String randomCode = "" + n;
                 doesUserExistInDatabase(new VolleyCallBack() {
                     @Override
                     public void onSuccess() {
+
+
                         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
@@ -67,6 +68,10 @@ public class ForgotPassword extends userInfoAppActivity {
                         };
                         RequestQueue requestQueue = Volley.newRequestQueue(ForgotPassword.this);
                         requestQueue.add(request);
+
+
+
+
                     }
 
                     @Override
@@ -76,20 +81,6 @@ public class ForgotPassword extends userInfoAppActivity {
                 }, emailAddress, ForgotPassword.this);
             }
         });
-
-
-
-        /*
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{ to});
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Forgot Password");
-        emailIntent.putExtra(Intent.EXTRA_TEXT, message);
-
-        //need this to prompts email client only
-        emailIntent.setType("message/rfc822");
-
-        startActivity(Intent.createChooser(emailIntent, "Choose an Email client :"));
-         */
 
     }
 }

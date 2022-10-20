@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/login_name"
             android:id="@+id/loginName"
-            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@."
             android:layout_margin="30dp"/>
         <EditText
             android:layout_width="300dp"
