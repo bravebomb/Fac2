@@ -32,8 +32,8 @@
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="@string/register_username"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                android:hint="@string/register_email"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@."
                 android:id="@+id/registerLoginName"
                 android:layout_margin="30dp"/>
             <EditText

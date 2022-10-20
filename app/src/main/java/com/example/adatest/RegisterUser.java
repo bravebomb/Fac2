@@ -4,6 +4,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -68,9 +70,9 @@ public class RegisterUser extends userInfoAppActivity {
 
                     @Override
                     public void onFailure() {
-                        if(/* kolla så att mail är ok*/){
+                        if(isValidEmail(name) == false){
                             Toast.makeText(RegisterUser.this, "Mail är fel!", Toast.LENGTH_SHORT).show();
-                        }else if(/* kolla ex date of birth osv*/){
+                        }else if(1 == 0){
 
                         }else{ //om allt är ok!
                             StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
@@ -112,5 +114,9 @@ public class RegisterUser extends userInfoAppActivity {
             }
         });
 
+    }
+
+    public static boolean isValidEmail(CharSequence target) {
+        return (!TextUtils.isEmpty(target) && Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 }
