@@ -68,39 +68,45 @@ public class RegisterUser extends userInfoAppActivity {
 
                     @Override
                     public void onFailure() {
-                        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-                            @Override
-                            public void onResponse(String response) {
-                                loginName.setText("");
-                                loginPass.setText("");
-                                loginIrlName.setText("");
-                                loginPhone.setText("");
-                                loginDob.setText("");
-                                loginAddress.setText("");
+                        if(/* kolla så att mail är ok*/){
+                            Toast.makeText(RegisterUser.this, "Mail är fel!", Toast.LENGTH_SHORT).show();
+                        }else if(/* kolla ex date of birth osv*/){
 
-                                Toast.makeText(RegisterUser.this, "Success!", Toast.LENGTH_SHORT).show();
-                            }
-                        }, new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
-                                Toast.makeText(RegisterUser.this, error.getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        }){
-                            @Nullable
-                            @Override
-                            protected Map<String, String> getParams() throws AuthFailureError {
-                                Map<String,String> param = new HashMap<String, String>();
-                                param.put("loginName", name);
-                                param.put("loginPass", pass);
-                                param.put("irlname", irlname);
-                                param.put("phone", phone);
-                                param.put("dob", dob);
-                                param.put("address", address);
-                                return param;
-                            }
-                        };
-                        RequestQueue requestQueue = Volley.newRequestQueue(RegisterUser.this);
-                        requestQueue.add(request);
+                        }else{ //om allt är ok!
+                            StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+                                @Override
+                                public void onResponse(String response) {
+                                    loginName.setText("");
+                                    loginPass.setText("");
+                                    loginIrlName.setText("");
+                                    loginPhone.setText("");
+                                    loginDob.setText("");
+                                    loginAddress.setText("");
+
+                                    Toast.makeText(RegisterUser.this, "Success!", Toast.LENGTH_SHORT).show();
+                                }
+                            }, new Response.ErrorListener() {
+                                @Override
+                                public void onErrorResponse(VolleyError error) {
+                                    Toast.makeText(RegisterUser.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                                }
+                            }){
+                                @Nullable
+                                @Override
+                                protected Map<String, String> getParams() throws AuthFailureError {
+                                    Map<String,String> param = new HashMap<String, String>();
+                                    param.put("loginName", name);
+                                    param.put("loginPass", pass);
+                                    param.put("irlname", irlname);
+                                    param.put("phone", phone);
+                                    param.put("dob", dob);
+                                    param.put("address", address);
+                                    return param;
+                                }
+                            };
+                            RequestQueue requestQueue = Volley.newRequestQueue(RegisterUser.this);
+                            requestQueue.add(request);
+                        }
                     }
                 }, loginName.getText().toString(), loginPass.getText().toString(), RegisterUser.this);
             }
