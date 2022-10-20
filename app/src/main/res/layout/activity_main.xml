@@ -61,5 +61,11 @@
             android:layout_margin="50dp"
             android:id="@+id/register_button"
             />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot"
+            android:id="@+id/forgot_button"
+            />
 
 </LinearLayout>

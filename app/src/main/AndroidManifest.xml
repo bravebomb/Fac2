@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Adatest"
         tools:targetApi="31">
         <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
             android:name=".AllpActivity"
             android:exported="false" />
         <activity

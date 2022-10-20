@@ -45,6 +45,9 @@
     <string name="settings_titel1">Settings</string>
     <string name="hem_favobutik">My favortie stores</string>
     <string name="cat_extra">Extra</string>
+    <string name="forgot">Forgot password</string>
+    <string name="enter_email">Please enter your email</string>
+    <string name="send">Send</string>
 
 
     <string-array name="Butiknamn">

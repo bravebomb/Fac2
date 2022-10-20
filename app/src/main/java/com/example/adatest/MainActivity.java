@@ -57,6 +57,7 @@ public class MainActivity extends userInfoAppActivity {
 
         Button enterButton = findViewById(R.id.enterButton);
         TextView registerButton = findViewById(R.id.register_button);
+        TextView forgotButton = findViewById(R.id.forgot_button);
         loginName = findViewById(R.id.loginName);
         loginPass = findViewById(R.id.loginPass);
         checkBox = findViewById(R.id.checkbox);
@@ -123,6 +124,14 @@ public class MainActivity extends userInfoAppActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, RegisterUser.class);
+                startActivity(intent);
+            }
+        });
+
+        forgotButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ForgotPassword.class);
                 startActivity(intent);
             }
         });

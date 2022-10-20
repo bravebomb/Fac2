@@ -50,7 +50,7 @@ public class userInfoAppActivity extends AppCompatActivity{
         RequestQueue requestQueue = Volley.newRequestQueue(activityClass);
         requestQueue.add(request);
     }
-    public void doesUserExistInDatabase(final VolleyCallBack callBack, String name, String pass, Activity activityClass){
+    public void doesUserExistInDatabase(final VolleyCallBack callBack, String name, Activity activityClass){
         StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
