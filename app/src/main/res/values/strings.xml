@@ -1,14 +1,65 @@
 <resources>
-    <string name="app_name">Fist and Crisps</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">Student Shop</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_ica">IcaActivity</string>
-    <!-- Strings used for fragments for navigation -->
+
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="Titel">Catagories</string>
+    <string name="change_languages">Change Languages</string>
+    <string name="butikerhem">Stores</string>
+    <string name="butiker_i_butiker">Stores</string>
+    <string name="search">search...</string>
+    <string name="tablayout_hem">Home</string>
+    <string name="tablayout_cat">Catagories</string>
+    <string name="tablayout_sett">Settings</string>
+    <string name="login_name">Email</string>
+    <string name="login_pass">Password</string>
+    <string name="login_knapp">Log in</string>
+    <string name="login_remember">Remember me</string>
+    <string name="login_register">Or register new user</string>
+    <string name="profile_logout">Logout</string>
+    <string name="register_titel">Register new user</string>
+    <string name="register_email">email</string>
+    <string name="register_password">Password</string>
+    <string name="register_namn">Name</string>
+    <string name="register_phone">Phone</string>
+    <string name="register_date">Date of birth (WIP)</string>
+    <string name="register_adress">Address</string>
+    <string name="register_knapp">Register</string>
+    <string name="sprak_knapp">Apply</string>
+    <string name="Home_products">All Products</string>
+    <string name="kat_meat">Meat and Fish</string>
+    <string name="cat_green">Greens</string>
+    <string name="cat_mej">Dairy</string>
+    <string name="cat_drink">Drinks</string>
+    <string name="cat_sweets">Sweets</string>
+    <string name="cat_bread">Bread and buns</string>
+    <string name="cat_veg">Vegetarian</string>
+    <string name="cat_vegan">Vegan</string>
+    <string name="settings_lang">Change language</string>
+    <string name="settings_titel1">Settings</string>
+    <string name="hem_favobutik">My favortie stores</string>
+    <string name="cat_extra">Extra</string>
+    <string name="forgot">Forgot password</string>
+    <string name="enter_email">Please enter your email</string>
+    <string name="send">Send</string>
+
+
+    <string-array name="Butiknamn">
+        <item>Ica</item>
+        <item>Coop</item>
+        <item>Willys</item>
+        <item>Hemköp</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item>english</item>
+        <item>swedish</item>
+        <item>chinese</item>
+    </string-array>
 </resources>

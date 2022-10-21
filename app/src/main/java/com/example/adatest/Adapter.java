@@ -41,6 +41,7 @@ public class Adapter extends RecyclerView.Adapter<ImageViewHolder>{
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         holder.nametvimg.setText(imagelist.get(position).getName());
         holder.infotvimg.setText(imagelist.get(position).getInfo());
+        holder.storetvimg.setText(imagelist.get(position).getStore());
         Glide.with(context).load(imagelist.get(position).getImage()).into(holder.imageView);
     }
 
@@ -52,7 +53,7 @@ public class Adapter extends RecyclerView.Adapter<ImageViewHolder>{
 
 class ImageViewHolder extends RecyclerView.ViewHolder{
 
-    TextView nametvimg, infotvimg;
+    TextView nametvimg, infotvimg, storetvimg;
     ImageView imageView;
 
     public ImageViewHolder(@NonNull View itemView) {
@@ -60,5 +61,6 @@ class ImageViewHolder extends RecyclerView.ViewHolder{
         imageView = itemView.findViewById(R.id.iv_retrieve);
         nametvimg = itemView.findViewById(R.id.nametvimg);
         infotvimg = itemView.findViewById(R.id.infotvimg);
+        storetvimg = itemView.findViewById(R.id.storetvimg);
     }
 }

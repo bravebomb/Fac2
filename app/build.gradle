@@ -5,6 +5,11 @@ plugins {
 android {
     compileSdk 32
 
+    packagingOptions {
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/LICENSE.md'
+    }
+
     defaultConfig {
         applicationId "com.example.adatest"
         minSdk 21
@@ -32,6 +37,7 @@ android {
 
 dependencies {
 
+
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
@@ -41,6 +47,7 @@ dependencies {
 
     implementation 'androidx.navigation:navigation-fragment:2.5.2'
     implementation 'androidx.navigation:navigation-ui:2.5.2'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
@@ -48,5 +55,10 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation "com.github.YarikSOffice:lingver:1.3.0"
+    implementation 'com.jakewharton:process-phoenix:2.1.2'
+    implementation 'com.sun.mail:android-mail:1.6.6'
+    implementation 'com.sun.mail:android-activation:1.6.7'
+
 
 }

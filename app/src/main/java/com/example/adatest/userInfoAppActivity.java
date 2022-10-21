@@ -13,6 +13,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,7 +50,7 @@ public class userInfoAppActivity extends AppCompatActivity{
         RequestQueue requestQueue = Volley.newRequestQueue(activityClass);
         requestQueue.add(request);
     }
-    public void doesUserExistInDatabase(final VolleyCallBack callBack, String name, String pass, Activity activityClass){
+    public void doesUserExistInDatabase(final VolleyCallBack callBack, String name, Activity activityClass){
         StringRequest request = new StringRequest(Request.Method.POST, url2, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -74,5 +76,22 @@ public class userInfoAppActivity extends AppCompatActivity{
         };
         RequestQueue requestQueue = Volley.newRequestQueue(activityClass);
         requestQueue.add(request);
+    }
+
+    public static byte[] encryptMD5(byte[] data) throws Exception{
+        MessageDigest md5 = MessageDigest.getInstance("MD5");
+        md5.update(data);
+        return md5.digest();
+    }
+
+    public String encrypt(byte[] data){
+        BigInteger md5Data = null;
+
+        try {
+            md5Data = new BigInteger(1, encryptMD5(data));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return md5Data.toString();
     }
 }

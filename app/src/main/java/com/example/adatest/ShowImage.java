@@ -26,26 +26,28 @@ import java.util.List;
 import java.util.Map;
 
 public class ShowImage extends AppCompatActivity {
-    public void getImages(String url, List<Model> imagelist, Adapter adapter, String store) {
+    public void getImages(List<Model> imagelist, Adapter adapter, String attribute, String searchWord) {
+        String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 imagelist.clear();
                 Model model;
                 try{
+
                     JSONObject jsonObject = new JSONObject(response);
                     String success = jsonObject.getString("success");
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
                     if(success.equals("1")){
                         for(int i = 0; i <jsonArray.length(); i++){
                             JSONObject object = jsonArray.getJSONObject(i);
-
                             String id = object.getString("id");
                             String urlImage = object.getString("image");
                             String name = object.getString("name");
                             String info = object.getString("info");
-
-                            model = new Model(id,urlImage,name,info);
+                            String store = object.getString("store");
+                            info = info.concat(":-");
+                            model = new Model(id,urlImage,name,info, store);
                             imagelist.add(model);
                             adapter.notifyDataSetChanged();
 
@@ -67,7 +69,8 @@ public class ShowImage extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> param = new HashMap<String, String>();
-                param.put("store", store);
+                param.put("attribute", attribute);
+                param.put("searchWord", searchWord);
                 return param;
             }
         };
@@ -82,7 +85,6 @@ public class ShowImage extends AppCompatActivity {
                 newList.add(model);
             }
         }
-
         if(newText.isEmpty()){
             adapter.setNewList(imagelist);
         } else {

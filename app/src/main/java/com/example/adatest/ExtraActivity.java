@@ -10,23 +10,20 @@ import android.os.Bundle;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LidlActivity extends ShowImage {
-
-
-    SearchView searchViewlidl;
+public class ExtraActivity extends ShowImage {
+    SearchView searchViewVegan;
     RecyclerView recyclerView;
-    String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
     List<Model> imagelist;
     LinearLayoutManager linearLayoutManager;
     Adapter adapter;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_lidl);
+        setContentView(R.layout.activity_extra);
 
-        searchViewlidl = findViewById(R.id.search_view_lidl);
-        searchViewlidl.clearFocus();
+        searchViewVegan = findViewById(R.id.search_view_vegan);
+        searchViewVegan.clearFocus();
 
         recyclerView = findViewById(R.id.rv);
         linearLayoutManager = new LinearLayoutManager(this);
@@ -34,9 +31,9 @@ public class LidlActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter, "lidl");
+        getImages(imagelist,adapter, "kategori","extra");
 
-        searchViewlidl.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        searchViewVegan.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 return false;
@@ -48,7 +45,5 @@ public class LidlActivity extends ShowImage {
                 return true;
             }
         });
-
-
     }
 }

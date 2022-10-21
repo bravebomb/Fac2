@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SprakActivity"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <ImageView
+        android:layout_gravity="center"
+        android:layout_width="500dp"
+        android:layout_height="50dp"
+        android:background="@drawable/top_circle"/>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:textColor="@color/Fine_red"
+                android:id="@+id/txttitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/change_languages"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp" />
+
+            <Spinner
+                android:background="@drawable/layout_bg"
+                android:id="@+id/settingsspinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txttitle"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_marginTop="20dp"
+                android:background="@drawable/layout_bg"
+                android:id="@+id/u"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sprak_knapp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>

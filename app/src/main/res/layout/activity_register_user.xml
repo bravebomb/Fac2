@@ -5,15 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
+    tools:context=".RegisterUser"
     android:background="#F5F5F5"
     android:gravity="center">
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register new user"
+        android:text="@string/register_titel"
         android:layout_gravity="center"
+        android:textColor="@color/Fine_red"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,15 +34,14 @@
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="username"
-                android:inputType="textPassword"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                android:hint="@string/register_email"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890@."
                 android:id="@+id/registerLoginName"
                 android:layout_margin="30dp"/>
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="Password"
+                android:hint="@string/register_password"
                 android:inputType="textPassword"
                 android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
                 android:id="@+id/registerLoginPass"
@@ -48,36 +49,52 @@
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="Name"
+                android:hint="@string/register_namn"
                 android:id="@+id/irlname"
                 android:digits="abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ "
                 android:layout_margin="30dp"/>
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="Phone"
+                android:hint="@string/register_phone"
                 android:id="@+id/phone"
                 android:digits="1234567890"
                 android:layout_margin="30dp"/>
-            <EditText
+            <TextView
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="Date of birth (WIP)"
+                android:hint="@string/register_date"
                 android:id="@+id/dob"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
-                android:layout_margin="30dp"/>
+                android:digits="1234567890 "
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/datepicker"
+                android:layout_marginLeft="30dp"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="JAN 01 2020"
+                android:textSize="20dp"
+                style="?android:spinnerStyle"
+                android:onClick="openDatePicker"
+                />
+
             <EditText
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
-                android:hint="Address"
+                android:hint="@string/register_adress"
                 android:id="@+id/address"
-                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890 "
-                android:layout_margin="30dp"/>
+                android:digits="abcdefghijklmnopqrstuvwxyzåäöABCDEFGHIJKLMNOPQRSTUVWXYZÅÄÖ0123456789 "
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp"/>
+
             <Button
+                android:layout_marginTop="30dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Register"
+                android:text="@string/register_knapp"
                 android:id="@+id/registerButton"
                 />
         </LinearLayout>

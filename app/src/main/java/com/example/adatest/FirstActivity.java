@@ -5,15 +5,20 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.tabs.TabLayout;
 
 public class FirstActivity extends AppCompatActivity {
 
-    private ViewPager2 viewPager2;
-    private TabLayout tabLayout;
-    private FragmentAdapter adapter;
+    ViewPager2 viewPager2;
+    TabLayout tabLayout;
+    FragmentAdapter fragmentadapter;
+    Button profilButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +27,12 @@ public class FirstActivity extends AppCompatActivity {
 
         viewPager2 = findViewById(R.id.view_pager);
         tabLayout = findViewById(R.id.tab_layout);
+        fragmentadapter = new FragmentAdapter(this);
+        viewPager2.setAdapter(fragmentadapter);
 
         //getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         //getSupportActionBar().setCustomView(R.layout.action_bar_layout);
-
-
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        adapter = new FragmentAdapter(fragmentManager,getLifecycle());
-        viewPager2.setAdapter(adapter);
+        //FragmentManager fragmentManager = getSupportFragmentManager();
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -54,5 +57,6 @@ public class FirstActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
     }
 }

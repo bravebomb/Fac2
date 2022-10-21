@@ -16,21 +16,32 @@
         android:orientation="vertical"
         tools:ignore="MissingConstraints">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coop"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:textSize="30dp"
+            android:fontFamily="@font/bebas_regular"
+            android:textColor="@color/Fine_red"/>
+
         <androidx.appcompat.widget.SearchView
             android:id="@+id/search_view_coop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="40dp"
             android:layout_marginLeft="40dp"
             android:background="@drawable/search_view_bg"
-            app:queryHint="search ..."
+            app:queryHint="@string/search"
             app:iconifiedByDefault="false">
         </androidx.appcompat.widget.SearchView>
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv"
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp" />

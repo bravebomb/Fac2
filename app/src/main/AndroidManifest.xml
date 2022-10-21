@@ -2,20 +2,63 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.adatest">
+    <uses-permission android:name="android.permission.INTERNET"/>
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".LanguageApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/iconapp"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Adatest"
         tools:targetApi="31">
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".AllpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExtraActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SweetsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VegetarianActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VeganActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DrinkActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DairyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BreadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GreensActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MeatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SprakActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Profile_activity"
+            android:exported="false" />
+        <activity
+            android:name=".ButikerActivity"
+            android:exported="false" />
         <activity
             android:name=".FAQActivity"
             android:exported="false" />
@@ -26,7 +69,7 @@
             android:name=".FirstActivity"
             android:exported="false" />
         <activity
-            android:name=".LidlActivity"
+            android:name=".HemkopActivity"
             android:exported="false" />
         <activity
             android:name=".WillysActivity"
@@ -48,6 +91,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver
+            android:name=".ReminderBroadcast"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

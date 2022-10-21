@@ -2,18 +2,16 @@ package com.example.adatest;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.Lifecycle;
+import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
-import com.example.adatest.AllFragments.ButikerFragment;
-import com.example.adatest.AllFragments.FavoriterFragment;
+import com.example.adatest.AllFragments.KategoriFragment;
+import com.example.adatest.AllFragments.SettingsFragment;
 import com.example.adatest.AllFragments.HemFragment;
-import com.example.adatest.AllFragments.ProfilFragment;
 
 public class FragmentAdapter extends FragmentStateAdapter {
-    public FragmentAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
-        super(fragmentManager, lifecycle);
+    public FragmentAdapter(@NonNull FragmentActivity fragmentActivity) {
+        super(fragmentActivity);
     }
 
     @NonNull
@@ -23,17 +21,16 @@ public class FragmentAdapter extends FragmentStateAdapter {
 
         switch (position){
             case 1:
-                return new ButikerFragment();
+                return new KategoriFragment();
             case 2:
-                return new FavoriterFragment();
-            case 3:
-                return new ProfilFragment();
+                return new SettingsFragment();
+            default:
+                return new HemFragment();
         }
-        return new HemFragment();
     }
 
     @Override
     public int getItemCount() {
-        return 4;
+        return 3;
     }
 }

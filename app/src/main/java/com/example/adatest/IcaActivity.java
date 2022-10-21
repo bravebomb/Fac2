@@ -12,10 +12,8 @@ import java.util.List;
 
 public class IcaActivity extends ShowImage {
 
-
     SearchView searchViewIca;
     RecyclerView recyclerView;
-    String url = "https://hex.cse.kau.se/~arviblom100/getvaror.php";
     List<Model> imagelist;
     LinearLayoutManager linearLayoutManager;
     Adapter adapter;
@@ -34,7 +32,7 @@ public class IcaActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(url,imagelist,adapter, "ica");
+        getImages(imagelist,adapter, "store", "ica");
 
         searchViewIca.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

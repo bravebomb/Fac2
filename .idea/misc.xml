@@ -3,10 +3,72 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Fac2/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.2765" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_allp.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_bread.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_butiker.xml" value="0.24066390041493776" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_coop.xml" value="0.5541666666666667" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_dairy.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_drink.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_extra.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_faqactivity.xml" value="0.5541666666666667" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_forgot_password.xml" value="0.2794871794871795" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_greens.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_ica.xml" value="0.5541666666666667" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_meat.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_profile.xml" value="0.5541666666666667" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_register_user.xml" value="0.401268115942029" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_sweets.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_vegan.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_vegetarian.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/butiker_item.xml" value="0.5541666666666667" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/fragment_hem.xml" value="0.4419047619047619" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/fragment_kategori.xml" value="0.4945652173913043" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/fragment_profil.xml" value="0.5541666666666667" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/item_iv.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/drawable/top_circle.xml" value="0.129" />
         <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/action_bar_layout.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/fragment_coop.xml" value="0.2872340425531915" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/ic_baseline_more_horiz_24.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/ic_launcher_background.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/layout_bg.xml" value="0.1" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/search_view_bg.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/drawable/top_circle.xml" value="0.203" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/action_bar_layout.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_bread.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_butiker.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_coop.xml" value="0.18414387031408308" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_dairy.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_drink.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_extra.xml" value="0.35688405797101447" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_faqactivity.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_first.xml" value="0.3385012919896641" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_greens.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_ica.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_lidl.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_main.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_meat.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_profile.xml" value="0.14722222222222223" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_register_user.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_sprak.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_sweets.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_vegan.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_vegetarian.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/activity_willys.xml" value="0.2" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/butiker_item.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/fragment_hem.xml" value="0.33" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/fragment_kategori.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/fragment_settings.xml" value="0.18414387031408308" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/layout/item_iv.xml" value="0.18414387031408308" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+        <entry key="..\:/Users/anede/AndroidStudioProjects/Fac23/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.203" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.196" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/drawable/button_shadow.xml" value="0.2035" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
@@ -15,7 +77,6 @@
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/drawable/top_circle.xml" value="0.23" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/action_bar_layout.xml" value="0.1" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/activity_coop.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/activity_faqactivity.xml" value="0.3385012919896641" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/activity_first.xml" value="0.14351851851851852" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/activity_ica.xml" value="0.1" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/activity_lidl.xml" value="0.358695652173913" />
