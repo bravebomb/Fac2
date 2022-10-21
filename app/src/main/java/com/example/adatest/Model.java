@@ -1,19 +1,20 @@
 package com.example.adatest;
 
 public class Model {
-    String id,name,info, store;
+    String id,name,info, store, erbjudande;
     String image;
 
     public Model(){
 
     }
 
-    public Model(String id, String image, String name, String info, String store) {
+    public Model(String id, String image, String name, String info, String store, String erbjudande) {
         this.id = id;
         this.image = image;
         this.name = name;
         this.info = info;
         this.store = store;
+        this.erbjudande = erbjudande;
     }
 
     public String getId() {
@@ -54,5 +55,9 @@ public class Model {
 
     public void setInfo(String info) {
         this.info = info;
+    }
+
+    public String getErbjudande() {
+        return erbjudande;
     }
 }

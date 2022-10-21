@@ -31,7 +31,7 @@ public class VegetarianActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(imagelist,adapter, "kategori","vegetarian");
+        getImages(imagelist,adapter, "kategori","VEGETARIAN");
 
         searchViewVegan.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override

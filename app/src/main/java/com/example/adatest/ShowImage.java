@@ -34,11 +34,11 @@ public class ShowImage extends AppCompatActivity {
                 imagelist.clear();
                 Model model;
                 try{
-
                     JSONObject jsonObject = new JSONObject(response);
                     String success = jsonObject.getString("success");
                     JSONArray jsonArray = jsonObject.getJSONArray("data");
                     if(success.equals("1")){
+
                         for(int i = 0; i <jsonArray.length(); i++){
                             JSONObject object = jsonArray.getJSONObject(i);
                             String id = object.getString("id");
@@ -46,8 +46,9 @@ public class ShowImage extends AppCompatActivity {
                             String name = object.getString("name");
                             String info = object.getString("info");
                             String store = object.getString("store");
+                            String erbjudande = object.getString("erbjudande");
                             info = info.concat(":-");
-                            model = new Model(id,urlImage,name,info, store);
+                            model = new Model(id,urlImage,name, info, store, erbjudande);
                             imagelist.add(model);
                             adapter.notifyDataSetChanged();
 
