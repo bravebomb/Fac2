@@ -31,7 +31,7 @@ public class SweetsActivity extends ShowImage {
         imagelist = new ArrayList<>();
         adapter = new Adapter(this, imagelist);
         recyclerView.setAdapter(adapter);
-        getImages(imagelist,adapter, "kategori","sweets");
+        getImages(imagelist,adapter, "kategori","SNACK");
 
         searchViewVegan.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
