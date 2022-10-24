@@ -1,0 +1,306 @@
+[33mcommit 06cde8c2531d0edea0a177ca311a78ff5fa06308[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Sun Oct 23 16:50:04 2022 +0200
+
+    +kanske fungerar om vi kan fixa "535 auth fail"
+
+[33mcommit b393f830749ae671e785b132324c92670f3ec2e6[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Fri Oct 21 08:30:11 2022 +0200
+
+    +test o skit men email funkar inte part 2
+
+[33mcommit ab7c19eec755e53c675a48461c2b241bcccff2d4[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Thu Oct 20 23:25:19 2022 +0200
+
+    +test o skit men email funkar inte
+
+[33mcommit 9e901fcfb390abd664225818de6d536f56dab50a[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 20 19:10:19 2022 +0200
+
+    +icke fungerande mail funktion :/
+
+[33mcommit b0b63864db9ddc2700d5ee6c4b360a7ad7731815[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Thu Oct 20 18:10:25 2022 +0200
+
+    +saker för att skicka mail forgor
+
+[33mcommit adbaa3679162090eac5c00841add1bcbb4005093[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 20 17:38:44 2022 +0200
+
+    +datepicker funkar 2.0?
+
+[33mcommit c8e539d7b9e54a48b0a40544fe66be662e88139e[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Thu Oct 20 17:24:51 2022 +0200
+
+    WIP forgor
+
+[33mcommit 5a3ee75d9577bc4dd5d72eabebb60b8e4b54a856[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 20 17:19:04 2022 +0200
+
+    +datepicker funkar?
+
+[33mcommit 5f0b6ecf9029eb4d69afcc47019bae7e806c38bd[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 20 16:31:57 2022 +0200
+
+    +email kollare
+
+[33mcommit bb9f26f8703b8779a41350e88a1ac00e8a34f0ab[m
+Merge: 7040d3e fdeb703
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Thu Oct 20 12:45:12 2022 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 7040d3e937a76af2dc4eb746fb797e3b89949cca[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Thu Oct 20 12:45:05 2022 +0200
+
+    fixa anes tack :)
+
+[33mcommit fdeb703d5a6be564be9cc6e8d1231fd9ebb45667[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 20 12:29:49 2022 +0200
+
+    +coop build fixad från corrupt
+    +bytt icon från klubba
+
+[33mcommit e97b1fc26d5d1f27afa1dc5604c61e1b1e358a49[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Wed Oct 19 16:47:59 2022 +0200
+
+    + kategorier klart
+    - alla produkter måste fixas
+
+[33mcommit bafb9c53c052d84c95b79cc37ca3824fc8fff2c8[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Wed Oct 19 12:54:42 2022 +0200
+
+    +all products knapp
+    +notification varje måndag
+
+[33mcommit 80a60a140000cc3e09e02b0fb3393693efb6400b[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Wed Oct 19 12:36:06 2022 +0200
+
+    +extra knapp
+    +notification
+
+[33mcommit 12eda53c63da4795ddd7dc02f27227f6f3e1425b[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Tue Oct 18 18:48:59 2022 +0200
+
+    +runda knappar
+
+[33mcommit fd97272ae088be026bb08a57f987d9a8a670d756[m
+Merge: a91db6a 74372b0
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Tue Oct 18 14:06:45 2022 +0200
+
+    små fix
+
+[33mcommit a91db6aab76da7cd4650397367532ae4df131780[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Tue Oct 18 13:53:07 2022 +0200
+
+    +språkbyte
+
+[33mcommit 74372b0b40b79dfdc5a216c8cd078f6e95279d5a[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Fri Oct 14 13:28:32 2022 +0200
+
+    favoriter är klart typ? idk
+
+[33mcommit 82c73c3d9d51d2fae0ed3f0b7e73e06a23d5a1f0[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Fri Oct 14 10:46:16 2022 +0200
+
+    uppdaterat "showImage" för mer dynamiskt
+
+[33mcommit d16bfc3bb636dd21b06c378e380f2a78ad24120e[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Fri Oct 14 10:38:48 2022 +0200
+
+    pris visas igen
+
+[33mcommit 25047e815df38b1797cc24ef6fc58d0c0cb5e439[m
+Merge: 4e8d10f 650a618
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Fri Oct 14 10:22:42 2022 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit 4e8d10f141c181558d5fb93a7ddd87bd841dde0f[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Fri Oct 14 10:22:33 2022 +0200
+
+    idk nå mög så jag kan pulla
+
+[33mcommit 650a6189169a30f6edf741936cb1440ee36ff2dd[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 13 23:53:29 2022 +0200
+
+    +påbörjad språkbytning
+
+[33mcommit 36b436ec527154fdb35b46fc00aeeaf8c238529d[m
+Merge: da0aaef 798ebdd
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 13 18:38:31 2022 +0200
+
+    Merge remote-tracking branch 'origin/master'
+
+[33mcommit da0aaef304526b9890abb1088fde99b009ba454a[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 13 18:38:22 2022 +0200
+
+    +fixade fint i butikerna
+
+[33mcommit 798ebddf0ab7dd24eab0aab1efdcc8c22c685098[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Thu Oct 13 13:43:58 2022 +0200
+
+    + password encryption
+
+[33mcommit 37882e1a663e1ba0c5274b716ebbcc8d7084353d[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Wed Oct 12 16:07:55 2022 +0200
+
+    +fixade fint i kategorier och hem
+
+[33mcommit 1ad1cf9e3b20929e4513ef241bce71e6a902efb9[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Wed Oct 12 14:49:23 2022 +0200
+
+    +knappar är finare på kategorier saknar frtf bilder
+
+[33mcommit 8c1ff29c880674eb3d6f75f79bad5101133f4283[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Wed Oct 12 13:51:33 2022 +0200
+
+    favorites är klart
+
+[33mcommit baab1008476be22443593792b24a1bb08627f723[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Wed Oct 12 13:22:34 2022 +0200
+
+    a
+
+[33mcommit e58118450cc139f1f964b03f6dceb6fa08d5896e[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Wed Oct 12 13:20:16 2022 +0200
+
+    a
+
+[33mcommit c0cf7194667ebf4c090a924e994053891a36dc6f[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Wed Oct 12 11:11:03 2022 +0200
+
+    +profilknapp
+
+[33mcommit c371545f049988129c3f4a194acfcc52bdb7be00[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Wed Oct 12 10:58:40 2022 +0200
+
+    remember user, logout, sharedpref för namn
+
+[33mcommit 9f9726f7ce39f3c8ddaf359f1a24c93203403fbe[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Wed Oct 12 10:56:21 2022 +0200
+
+    +activities för alla kategorier
+    +tog bort profil nån mupp var skum
+    +håller på med knappar
+
+[33mcommit e1f5e4f507a3c586a18a3d532abf2c5f15baf41d[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Wed Oct 12 10:11:44 2022 +0200
+
+    remember user, logout, sharedpref för namn
+
+[33mcommit 633d17ab5b7753672fd688a9ba61aa0f26abb7c0[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Tue Oct 11 20:40:55 2022 +0200
+
+    +ändrade så affärer kommer man till ifrån hem
+    +fickat en viewpager som ökar ju mer affärer man har
+    +viewpagern kan man klicka på för att ta sig till affärvarorna
+    +favorit knapp
+    -tog bort profil (ska flyttas)
+    +kategorier (funkar inte att gå in i dem än)
+
+[33mcommit 09ac9d6c7e23def1d7ddaac9f43fec6b80f7fd13[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Fri Oct 7 13:45:55 2022 +0200
+
+    stuffé
+
+[33mcommit b133f079cd099f60f2ceac016595ce0bebfca799[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Fri Oct 7 00:32:53 2022 +0200
+
+    +små detaljer som färgbakgrund på visa sidor
+    +fixade lite margin på FAQ
+
+[33mcommit 906d835ad92a2db9a9ff390a2eb87691d36cc9f4[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 6 22:21:58 2022 +0200
+
+    +FAQ
+
+[33mcommit 436766b0f0cbc3fca8cfc0e6e2584550b7ad4569[m
+Author: Lokkrip <arvidblomberg13@gmail.com>
+Date:   Thu Oct 6 18:28:20 2022 +0200
+
+    uppdaterade för nya databasen
+
+[33mcommit d2b3a4080566d2ec7e2334916a5d7fc2e05cc65f[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 6 17:55:14 2022 +0200
+
+    +profilbild
+
+[33mcommit 90a0e463793fab90b4cdb119b57be4ef6af33d92[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Oct 6 09:32:59 2022 +0200
+
+    +tagit bar baren högst upp
+    +fixat knapparna finare
+    +ny logga
+    +håller på med profil
+
+[33mcommit 28aa0e4be82589cda848cf98ef62f4b60c75ea88[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Tue Oct 4 00:33:48 2022 +0200
+
+    +sök för alla sidor
+    +mer php
+    +arivd o mitt sitter ihop
+
+[33mcommit 909c5ef94e830163dc63f3f140a2ffa59c534fa2[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Sep 22 13:44:27 2022 +0200
+
+    ändrade bilder
+
+[33mcommit ac24b2939a1a7574c149133b8fe3acf645363f2c[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Sep 22 00:45:06 2022 +0200
+
+    +tablayout
+    +search bar - funkar inte
+    +activity bar
+
+[33mcommit f8609ad7328a02226ab9b16751c030655231f3cb[m
+Author: bravebomb <ane.delalic@hotmail.se>
+Date:   Thu Sep 22 00:42:51 2022 +0200
+
+    +tablayout
+    +search bar - funkar inte
+    +activity bar
