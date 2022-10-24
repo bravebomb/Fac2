@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Patterns;
@@ -91,6 +92,7 @@ public class RegisterUser extends userInfoAppActivity {
                                     loginAddress.setText("");
 
                                     Toast.makeText(RegisterUser.this, "Success!", Toast.LENGTH_SHORT).show();
+                                    finish();
                                 }
                             }, new Response.ErrorListener() {
                                 @Override
