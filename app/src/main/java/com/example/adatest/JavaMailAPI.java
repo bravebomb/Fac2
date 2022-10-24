@@ -17,7 +17,7 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
 
     private Context context;
 
-    private Session session;
+    //private Session session;
     private String email, subject, message;
 
     public JavaMailAPI(Context context, String email, String subject, String message) {
@@ -31,12 +31,12 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
     @Override
     protected Void doInBackground(Void... voids) {
         Properties properties = new Properties();
-        properties.setProperty("mail.smtp.host", "smtp.zoho.in");
+        properties.setProperty("mail.smtp.host", "smtp.gmail.com");
         properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory"); // If ssl is your concern, uncomment this line
         properties.setProperty("mail.smtp.socketFactory.fallback", "true");
-        properties.setProperty("mail.smtp.port", "587");//HTTP - 587 , HTTPS - 465
+        properties.setProperty("mail.smtp.port", "465");//HTTP - 587 , HTTPS - 465
         properties.setProperty("mail.smtp.socketFactory.port", "465");
-        properties.setProperty("mail.smtp.ssl.trust", "smtp.zoho.in");
+        properties.setProperty("mail.smtp.ssl.trust", "smtp.zoho.com");
         properties.put("mail.smtp.starttls.enable", "true");
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.debug", "true");
@@ -47,12 +47,20 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
 
 
 
+        /*
         session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication("fistsandcrisps@zohomail.eu", "uG0Pc3WnH48v");
+                return new PasswordAuthentication("fistsandcrisps@zohomail.eu", "Fist@NdCrisp");
             }
         });
 
+         */
+
+        Session session = Session.getInstance(properties, new javax.mail.Authenticator() {
+            protected PasswordAuthentication getPasswordAuthentication() {
+                return new PasswordAuthentication(Utils.EMAIL, Utils.PASSWORD);
+            }
+        });
         MimeMessage mimeMessage = new MimeMessage(session);
         try {
             mimeMessage.setFrom(new InternetAddress(Utils.EMAIL));
