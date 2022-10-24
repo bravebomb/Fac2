@@ -44,7 +44,7 @@ public class JavaMailAPI extends AsyncTask<Void, Void, Void> {
         properties.put("mail.transport.protocol", "smtp");
         properties.put("mail.debug.auth", "true");
         properties.setProperty( "mail.pop3.socketFactory.fallback", "false");
-
+//
 
 
         session = Session.getDefaultInstance(properties, new javax.mail.Authenticator() {
