@@ -98,4 +98,11 @@ public class ForgotPassword extends userInfoAppActivity {
         });
     }
 
+    private void sendEmail(String randomCode) {
+        String mEmail = email.getText().toString();
+
+        JavaMailAPI javaMailAPI = new JavaMailAPI(this, Utils.EMAIL, "test", randomCode);
+
+        javaMailAPI.execute();
+    }
 }

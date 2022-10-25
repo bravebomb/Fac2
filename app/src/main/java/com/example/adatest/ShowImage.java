@@ -78,7 +78,49 @@ public class ShowImage extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(ShowImage.this);
         requestQueue.add(request);
     }
+    public void getAllProducts(List<Model> imagelist, Adapter adapter) {
+        String url = "https://hex.cse.kau.se/~arviblom100/getall.php";
+        StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                imagelist.clear();
+                Model model;
+                try{
+                    JSONObject jsonObject = new JSONObject(response);
+                    String success = jsonObject.getString("success");
+                    JSONArray jsonArray = jsonObject.getJSONArray("data");
+                    if(success.equals("1")){
 
+                        for(int i = 0; i <jsonArray.length(); i++){
+                            JSONObject object = jsonArray.getJSONObject(i);
+                            String id = object.getString("id");
+                            String urlImage = object.getString("image");
+                            String name = object.getString("name");
+                            String info = object.getString("info");
+                            String store = object.getString("store");
+                            String erbjudande = object.getString("erbjudande");
+                            info = info.concat(":-");
+                            model = new Model(id,urlImage,name, info, store, erbjudande);
+                            imagelist.add(model);
+                            adapter.notifyDataSetChanged();
+
+                        }
+                    }else{
+
+                    }
+                }catch (Exception e){
+                }
+            }
+
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(ShowImage.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(ShowImage.this);
+        requestQueue.add(request);
+    }
     public void filterList(String newText, List<Model> imagelist, Adapter adapter) {
         List<Model> newList = new ArrayList<>();
         for(Model model : imagelist){
