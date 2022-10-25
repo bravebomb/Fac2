@@ -4,6 +4,7 @@ import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class CoopActivity extends ShowImage {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coop);
-
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         searchViewCoop = findViewById(R.id.search_view_coop);
         searchViewCoop.clearFocus();
 

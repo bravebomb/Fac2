@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -50,6 +51,7 @@ public class ForgotPassword extends userInfoAppActivity {
         setContentView(R.layout.activity_forgot_password);
         btn = findViewById(R.id.sendButton);
         email = findViewById(R.id.email);
+        this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         String url = "https://hex.cse.kau.se/~arviblom100/setRecoveryCode.php";
 
