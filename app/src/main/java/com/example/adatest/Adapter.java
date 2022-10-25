@@ -41,11 +41,9 @@ public class Adapter extends RecyclerView.Adapter<ImageViewHolder>{
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         holder.nametvimg.setText(imagelist.get(position).getName());
         String info;
-        if(imagelist.get(position).getErbjudande().toString().equals("null")){
-            info = imagelist.get(position).getErbjudande() + " " + imagelist.get(position).getInfo();
-        }else{
+
             info = imagelist.get(position).getInfo();
-        }
+
         holder.infotvimg.setText(info);
         holder.storetvimg.setText(imagelist.get(position).getStore());
         Glide.with(context).load(imagelist.get(position).getImage()).into(holder.imageView);
