@@ -3,9 +3,7 @@ package com.example.adatest;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
@@ -22,8 +20,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import java.io.IOException;
-import java.security.GeneralSecurityException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -61,10 +57,11 @@ public class ForgotPassword extends userInfoAppActivity {
                 Random rnd = new Random();
                 int n = 100000 + rnd.nextInt(900000);
                 String randomCode = "" + n;
+
                 doesUserExistInDatabase(new VolleyCallBack() {
                     @Override
                     public void onSuccess() {
-                        sendEmail(randomCode);
+
 
                         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                             @Override
@@ -100,6 +97,7 @@ public class ForgotPassword extends userInfoAppActivity {
             }
         });
     }
+
     private void sendEmail(String randomCode) {
         String mEmail = email.getText().toString();
 
@@ -107,5 +105,4 @@ public class ForgotPassword extends userInfoAppActivity {
 
         javaMailAPI.execute();
     }
-
 }

@@ -58,5 +58,11 @@ public class FirstActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(false);
     }
 }

@@ -136,7 +136,14 @@ public class MainActivity extends userInfoAppActivity {
             }
         });
 
+
     }
+
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(false);
+    }
+
 
 
     private void createNotificationChannel() {
