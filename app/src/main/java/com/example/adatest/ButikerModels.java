@@ -28,6 +28,8 @@ public class ButikerModels {
         this.favstatus = favstatus;
     }
 
+
+
     public void setBild(int bild) {
         this.bild = bild;
     }

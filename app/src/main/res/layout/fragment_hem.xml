@@ -30,12 +30,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_marginTop="30dp"
-            android:layout_width="300dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:background="@drawable/icaannons"/>
 
     <LinearLayout
         android:layout_marginTop="30dp"

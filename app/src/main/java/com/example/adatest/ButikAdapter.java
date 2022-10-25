@@ -3,6 +3,7 @@ package com.example.adatest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -64,6 +65,9 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
         // based on the position of the recycler view
 
         holder.name.setText(butikerModels.get(position).getButikNamn());
+        if(butikerModels.get(position).getFavstatus().equals("1")){
+            holder.favoritKnapp.setImageResource(R.drawable.ic_baseline_favorite_24);
+        }
         holder.imageView.setImageResource(butikerModels.get(position).getBild());
     }
 
@@ -77,6 +81,8 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
         notifyDataSetChanged();
     }
 
+    public void favoriteAll(){}
+
     public class ButikViewHolder extends RecyclerView.ViewHolder{
         // grabbing the views from our layout file
         // kinda like in the onCreate method
@@ -85,12 +91,16 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
         TextView name;
         ImageButton favoritKnapp;
 
+        public void getFavstatus(){
+
+        }
         public ButikViewHolder(@NonNull View itemView, RecycleViewButikerInterface recycleViewButikerInterface) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.butik_bild);
             name = itemView.findViewById(R.id.butik_namn);
             favoritKnapp = itemView.findViewById(R.id.favknapp);
+
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -105,10 +115,10 @@ public class ButikAdapter extends RecyclerView.Adapter<ButikAdapter.ButikViewHol
                 }
             });
 
+
             favoritKnapp.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    //favoritKnapp.setImageResource(R.drawable.ic_baseline_favorite_24);
 
                     int pos = getAdapterPosition();
                     ButikerModels model = butikerModels.get(pos);

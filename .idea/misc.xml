@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Fac2/app/src/main/res/layout/activity_butiker.xml" value="0.5040760869565217" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/butiker_item.xml" value="0.5040760869565217" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/fragment_hem.xml" value="0.5040760869565217" />
+        <entry key="..\:/Fac2/app/src/main/res/layout/item_iv.xml" value="0.5040760869565217" />
         <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/drawable/top_circle.xml" value="0.129" />
         <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/action_bar_layout.xml" value="0.14722222222222223" />
         <entry key="..\:/Users/Hanna Nordlund/AndroidStudioProjects/Fac2/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
@@ -35,10 +39,6 @@
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/fragment_willys.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/layout/item_iv.xml" value="0.14351851851851852" />
         <entry key="..\:/Users/anede/AndroidStudioProjects/adatest/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.103" />
-        <entry key="..\:/Users/arvid/AndroidStudioProjects/Fac2/app/src/main/res/layout/activity_butiker.xml" value="0.14722222222222223" />
-        <entry key="..\:/Users/arvid/AndroidStudioProjects/Fac2/app/src/main/res/layout/activity_first.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/arvid/AndroidStudioProjects/Fac2/app/src/main/res/layout/butiker_item.xml" value="0.25" />
-        <entry key="..\:/Users/arvid/AndroidStudioProjects/Fac2/app/src/main/res/layout/fragment_hem.xml" value="0.358695652173913" />
         <entry key="..\:/Users/arvid/AndroidStudioProjects/Fac2/app/src/main/res/layout/item_iv.xml" value="0.14444444444444443" />
       </map>
     </option>

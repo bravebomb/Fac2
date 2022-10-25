@@ -200,13 +200,21 @@ public class HemFragment extends Fragment implements RecycleViewButikerInterface
                         for(int i = 0; i < jsonArray.length(); i++){
                             JSONObject object = jsonArray.getJSONObject(i);
                             String storename = object.getString("storename");
-                            butikerModels.add(new ButikerModels(storename,getStoreImage(storename)));
+                            ButikerModels temp = new ButikerModels(storename, getStoreImage(storename));
+                            temp.setFavstatus("1");
+                            //Toast.makeText(getContext(), temp.toString(), Toast.LENGTH_SHORT).show();
+
+
+                            butikerModels.add(temp);
+
+
                         }
 
                         adapter = new ButikAdapter(getActivity(),
                                 butikerModels,HemFragment.this, userName);
                         recyclerView.setAdapter(adapter);
                         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
                     }else{
 
                     }
