@@ -23,6 +23,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -81,31 +82,35 @@ public class MainActivity extends userInfoAppActivity {
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                doesUserPassExistInDatabase(new VolleyCallBack() {
-                    @Override
-                    public void onSuccess() {
-                        if (isCheckboxChecked) {
+                try {
+                    doesUserPassExistInDatabase(new VolleyCallBack() {
+                        @Override
+                        public void onSuccess() {
+                            if (isCheckboxChecked) {
+                                SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("remember", "true");
+                                editor.apply();
+                            }
+                            SharedPreferences.Editor loginEditor = loginNamePref.edit();
+                            loginEditor.putString("userNameKey", loginName.getText().toString());
+                            loginEditor.apply();
+                            Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+                            startActivity(intent);
+                        }
+
+                        @Override
+                        public void onFailure() {
                             SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
                             SharedPreferences.Editor editor = preferences.edit();
-                            editor.putString("remember", "true");
+                            editor.putString("remember", "false");
                             editor.apply();
+                            Toast.makeText(MainActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();
                         }
-                        SharedPreferences.Editor loginEditor = loginNamePref.edit();
-                        loginEditor.putString("userNameKey", loginName.getText().toString());
-                        loginEditor.apply();
-                        Intent intent = new Intent(MainActivity.this, FirstActivity.class);
-                        startActivity(intent);
-                    }
-
-                    @Override
-                    public void onFailure() {
-                        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-                        SharedPreferences.Editor editor = preferences.edit();
-                        editor.putString("remember", "false");
-                        editor.apply();
-                        Toast.makeText(MainActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();
-                    }
-                }, loginName.getText().toString(), encrypt(loginPass.getText().toString().getBytes()), MainActivity.this);
+                    }, loginName.getText().toString(), encrypt(loginPass.getText().toString()), MainActivity.this);
+                } catch (NoSuchAlgorithmException e) {
+                    e.printStackTrace();
+                }
 
             }
         });

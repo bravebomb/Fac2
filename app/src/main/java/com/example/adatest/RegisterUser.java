@@ -30,6 +30,7 @@ import com.example.adatest.userInfoAppActivity;
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
@@ -63,7 +64,7 @@ public class RegisterUser extends userInfoAppActivity {
                 String name = loginName.getText().toString();
                 //String pass = loginPass.getText().toString();
                 //pass = encrypt(pass.getBytes());
-                String pass = encrypt(loginPass.getText().toString().getBytes());
+                String pass = loginPass.getText().toString();
                 String irlname = loginIrlName.getText().toString();
                 String phone = loginPhone.getText().toString();
                 //String dob = loginDob.getText().toString();
@@ -73,6 +74,15 @@ public class RegisterUser extends userInfoAppActivity {
 
 
                 doesUserExistInDatabase(new VolleyCallBack() {
+                    String hashPass;
+                    {
+                        try {
+                            hashPass = encrypt(pass);
+                        } catch (NoSuchAlgorithmException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
                     @Override
                     public void onSuccess() {
                         Toast.makeText(RegisterUser.this, "User already exists!", Toast.LENGTH_SHORT).show();
@@ -106,7 +116,7 @@ public class RegisterUser extends userInfoAppActivity {
                                 protected Map<String, String> getParams() throws AuthFailureError {
                                     Map<String,String> param = new HashMap<String, String>();
                                     param.put("loginName", name);
-                                    param.put("loginPass", pass);
+                                    param.put("loginPass", hashPass);
                                     param.put("irlname", irlname);
                                     param.put("phone", phone);
                                     param.put("dob", dateButton.getText().toString());

@@ -14,7 +14,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import java.math.BigInteger;
-import java.security.MessageDigest;
+import java.security.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -78,20 +78,18 @@ public class userInfoAppActivity extends AppCompatActivity{
         requestQueue.add(request);
     }
 
-    public static byte[] encryptMD5(byte[] data) throws Exception{
-        MessageDigest md5 = MessageDigest.getInstance("MD5");
-        md5.update(data);
-        return md5.digest();
-    }
-
-    public String encrypt(byte[] data){
-        BigInteger md5Data = null;
-
-        try {
-            md5Data = new BigInteger(1, encryptMD5(data));
-        }catch (Exception e){
-            e.printStackTrace();
+public static String encrypt(String input) throws NoSuchAlgorithmException {
+    String result = input;
+    if(input != null) {
+        MessageDigest md = MessageDigest.getInstance("MD5"); //or "SHA-1"
+        md.update(input.getBytes());
+        BigInteger hash = new BigInteger(1, md.digest());
+        result = hash.toString(16);
+        while(result.length() < 32) { //40 for SHA-1
+            result = "0" + result;
         }
-        return md5Data.toString();
     }
+    return result;
+}
+
 }

@@ -71,7 +71,7 @@ public class ForgotPassword extends userInfoAppActivity {
                         //sendEmail(randomCode);
                         AlertDialog alertDialog = new AlertDialog.Builder(ForgotPassword.this).create();
                         alertDialog.setTitle("Mail function NYI");
-                        alertDialog.setMessage("The mail function is not yet implemented, please use this code: " + randomCode + " on the website below to reset your password");
+                        alertDialog.setMessage("The mail function is not yet implemented, please use this code: " + randomCode + " on the website below to reset your password\n" + "https://hex.cse.kau.se/~arviblom100/adminplattform/userchangepassword.php");
                         alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
