@@ -40,10 +40,10 @@ public class Adapter extends RecyclerView.Adapter<ImageViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull ImageViewHolder holder, int position) {
         holder.nametvimg.setText(imagelist.get(position).getName());
-        String info;
-
-            info = imagelist.get(position).getInfo();
-
+        String info = imagelist.get(position).getInfo();;
+        if(!imagelist.get(position).getErbjudande().equals("null")) {
+            info = imagelist.get(position).getErbjudande() + " " + info;
+        }
         holder.infotvimg.setText(info);
         holder.storetvimg.setText(imagelist.get(position).getStore());
         Glide.with(context).load(imagelist.get(position).getImage()).into(holder.imageView);
