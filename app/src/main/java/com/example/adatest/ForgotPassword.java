@@ -1,9 +1,11 @@
 package com.example.adatest;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
@@ -66,8 +68,17 @@ public class ForgotPassword extends userInfoAppActivity {
                 doesUserExistInDatabase(new VolleyCallBack() {
                     @Override
                     public void onSuccess() {
-                        sendEmail(randomCode);
-
+                        //sendEmail(randomCode);
+                        AlertDialog alertDialog = new AlertDialog.Builder(ForgotPassword.this).create();
+                        alertDialog.setTitle("Mail function NYI");
+                        alertDialog.setMessage("The mail function is not yet implemented, please use this code: " + randomCode + " on the website below to reset your password");
+                        alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        });
+                        alertDialog.show();
                         StringRequest request = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
                             @Override
                             public void onResponse(String response) {
