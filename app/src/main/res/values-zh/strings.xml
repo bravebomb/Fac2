@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Fist and Crisps</string>
+    <string name="app_name">学生商店</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_ica">IcaActivity</string>
 
@@ -12,7 +12,7 @@
 
     <string name="Titel">类别</string>
     <string name="change_languages">更改语言</string>
-    <string name="butikerhem">Stores</string>
+    <string name="butikerhem">专卖店</string>
     <string name="butiker_i_butiker">专卖店</string>
     <string name="search">搜索...</string>
     <string name="tablayout_hem">家</string>
@@ -46,4 +46,7 @@
     <string name="settings_titel1">设置</string>
     <string name="hem_favobutik">我最喜欢的商店</string>
     <string name="cat_extra">额外的</string>
+    <string name="forgot">忘记密码</string>
+    <string name="enter_email">请输入您的电子邮件</string>
+    <string name="send">发送</string>
 </resources>
